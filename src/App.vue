@@ -1,6 +1,8 @@
 <template>
-  <TheHeader />
-  <TheHero />
+  <main class="layout"> 
+    <TheHeader />
+    <TheHero />
+  </main>
 </template>
 
 <script>
@@ -17,5 +19,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/sass/main.scss';
 
 </style>
