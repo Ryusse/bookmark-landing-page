@@ -31,6 +31,33 @@
     }
   }
 
+  //Flexbox
+  @mixin flexbox($dir: null, $jc: null, $ai: null, $gap: null) {
+    display: flex;
+  
+    @if $dir == col  {
+      flex-direction: column;
+    }
+    @else if $dir == column {
+      flex-direction: column;
+    }
+    @else if $dir == row {
+      flex-direction: row;
+    }
+  
+    @if $ai {
+      align-items: $ai;
+    }
+  
+    @if $jc {
+      justify-content: $jc;
+    }
+  
+    @if $gap {
+      gap: $gap;
+    }
+  } 
+
   //transitions
 @mixin transition($args...) {
     -webkit-transition: $args;
