@@ -1,45 +1,48 @@
-.header{
-    margin: 2rem 0;
+
+@use '../abstracts/all' as *;
+
+.header {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $white;
+  place-items: center;
+  gap: 1rem;
+
+  .logo {
+    justify-self: start;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: $white;
     place-items: center;
-    gap: 1rem;
+  }
 
-    .logo{
-        justify-self: start;
-        display: grid;
-        place-items: center;
+  .nav {
+    justify-self: end;
+    display: none;
+
+    @include query(md) {
+      display: grid;
+      place-items: center;
     }
 
-    .nav{
-        justify-self: end;
-        display: none;
-       
-        @include query(md){
-            display: grid;
-            place-items: center;           
-        }
-
-        &__list{
-            display: grid;
-            gap: 2rem;
-            place-items: center;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        &__link{
-            display: grid;
-            @include transition(all .2s ease-in-out)
-        }
+    &__list {
+      display: grid;
+      gap: 2rem;
+      place-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .menu{
-        display: grid;
-        justify-self: end;
-        cursor: pointer;
-        @include query(md){
-            display: none;
-        }
+    &__link {
+      display: grid;
+      @include transition(all 0.2s ease-in-out);
     }
+  }
+
+  .menu {
+    display: grid;
+    justify-self: end;
+    cursor: pointer;
+    @include query(md) {
+      display: none;
+    }
+  }
 }

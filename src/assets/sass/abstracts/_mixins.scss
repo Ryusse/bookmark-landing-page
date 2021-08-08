@@ -50,11 +50,9 @@
     @if $ai {
       align-items: $ai;
     }
-  
     @if $jc {
       justify-content: $jc;
     }
-  
     @if $gap {
       gap: $gap;
     }
@@ -67,4 +65,4 @@
     -ms-transition: $args;
     -o-transition: $args;
     transition: $args;
-  }
+}

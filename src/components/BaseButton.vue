@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ color: bgColor }"> <!-- to inserit color -->
+  <div :style="{ color: bgColor }"> <!-- to insert color -->
     <button :style="btnStyles" :class="$style['base-btn']">
       <slot></slot>
     </button>
@@ -11,7 +11,11 @@ export default {
   props: {
     width: {
       type: Number,
-      default: 161,
+      default: 160,
+    },
+    height: {
+      type: Number,
+      default: 42,
     },
     color: {
       type: String,
@@ -28,6 +32,7 @@ export default {
         color: this.color,
         backgroundColor: this.bgColor,
         width: `${this.width}px`,
+        height: `${this.height}px`,
         borderColor: this.bgColor,
       },
     };
@@ -36,24 +41,33 @@ export default {
 </script>
 
 <style lang="scss" module>
-html {
-  font-family: sans-serif; // temporary
-}
 
 .base-btn {
   all: unset;
-  margin: 10px;
-  height: 41px;
+  margin: 10px 0;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
-  transition: all 300ms;
+  transition: all 500ms;
+  box-shadow: 0px 4px 10px #00000029;
+  font-weight: 500;
+  font-size: clamp(.85rem, 2.1vw, .9rem);
 
   &:hover {
     background-color: transparent !important; // override inline styles
     color: inherit !important; // override inline styles
   }
+
+  @media screen and (max-width: 700px) {
+    // width: 122% !important; // override
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 40vw !important; // override
+  }
+  
 }
+
 </style>
