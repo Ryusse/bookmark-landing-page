@@ -1,6 +1,8 @@
 <template>
-  <TheHeader />
-  <TheHero />
+  <main class="layout"> 
+    <TheHeader />
+    <TheHero />
+  </main>
 </template>
 
 <script>
