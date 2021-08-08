@@ -1,0 +1,68 @@
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+      @if $fs-breakpoint == null {
+        font-size: $fs-font-size;
+      }
+      @else {
+        // If $fs-font-size is a key that exists in $fs-breakpoints, use the value
+        @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+          $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+        }
+        @media screen and (min-width: $fs-breakpoint) {
+          font-size: $fs-font-size;
+        }
+      }
+    }
+  }
+  
+  @mixin query($breakpoint) {
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Get the breakpoint value.
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+      // Write the media query.
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+      // If the breakpoint doesn't exist in the map.
+    } @else {
+      // Log a warning.
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }
+
+  //Flexbox
+  @mixin flexbox($dir: null, $jc: null, $ai: null, $gap: null) {
+    display: flex;
+  
+    @if $dir == col  {
+      flex-direction: column;
+    }
+    @else if $dir == column {
+      flex-direction: column;
+    }
+    @else if $dir == row {
+      flex-direction: row;
+    }
+  
+    @if $ai {
+      align-items: $ai;
+    }
+  
+    @if $jc {
+      justify-content: $jc;
+    }
+  
+    @if $gap {
+      gap: $gap;
+    }
+  } 
+
+  //transitions
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
