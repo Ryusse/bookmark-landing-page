@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue'
-import TheHero from './components/TheHero.vue'
+import TheHeader from './components/TheHeader.vue';
+import TheHero from './components/TheHero.vue';
 
 export default {
   name: 'App',
