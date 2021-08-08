@@ -37,13 +37,7 @@ export default {
 
 <style lang="scss" module>
 html {
-  font-family: sans-serif;
-}
-
-body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+  font-family: sans-serif; // temporary
 }
 
 .base-btn {
