@@ -1,3 +1,4 @@
+<!-- Delete the texts as you add the texts to the site -->
 
 ------------------------------------------------------------------------------
 ## Features Section
