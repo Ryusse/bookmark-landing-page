@@ -3,7 +3,7 @@
     gap: 1rem;
     grid-template-columns: 2% repeat(4, 1fr) 2%;
     grid-template-areas:
-        ". navbar   navbar   navbar    navbar  ."
+        "header header   header   header    header  header"
         ".   home     home     home     home   ."
         ". features features features features ."
         ".  footer   footer   footer   footer  .";
@@ -14,13 +14,13 @@
       grid-template-columns: repeat(8, 1fr);
   
       grid-template-areas:
-        ".  navbar   navbar   navbar   navbar   navbar   navbar  ."
+        "header  header   header   header   header   header   header  header"
         ".   home     home     home     home     home     home   ."
         ". features features features features features features ."
         ".  footer   footer   footer   footer   footer   footer  .";
     }
 
     .header{
-        grid-area: navbar;
+        grid-area: header;
     }
 }

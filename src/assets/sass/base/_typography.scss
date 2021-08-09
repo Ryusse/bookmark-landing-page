@@ -13,7 +13,11 @@ a{
 
 //HEADER
 
-.nav__link{
+.header{
+    background-color: $white;
+}
+
+.navbar__link{
     text-transform: uppercase;
     @include font-size($nav-font-sizes);
 
