@@ -1,33 +1,32 @@
-
 @use '../abstracts/all' as *;
 
 .layout {
   display: grid;
   gap: 1rem;
   grid-template-columns: 2% repeat(4, 1fr) 2%;
+  margin: auto;
   grid-template-areas:
-    ". navbar   navbar   navbar    navbar  ."
+    "header header   header   header    header  header"
     ".   home     home     home     home   ."
     ". features features features features ."
     ".  footer   footer   footer   footer  .";
-  margin: auto;
   height: auto;
 
-  @include query(md) {
-    grid-template-columns: repeat(8, 1fr);
+  @include query(xl) {
+    grid-template-columns: 1fr repeat(8, 1fr) 1fr;
 
     grid-template-areas:
-      ".  navbar   navbar   navbar   navbar   navbar   navbar  ."
-      ".   home     home     home     home     home     home   ."
-      ". features features features features features features ."
-      ".  footer   footer   footer   footer   footer   footer  .";
-  }
+    "header  header   header   header   header   header   header  header header header"
+    ".   home     home     home     home     home     home  home home   ."
+    ". features features features features features features features features."
+    "footer  footer   footer   footer   footer   footer   footer  footer footer footer";
+}
 
   .header {
-    grid-area: navbar;
+    grid-area: header;
   }
 
   .hero {
-      grid-area: home;
+    grid-area: home;
   }
 }
