@@ -70,7 +70,8 @@ export default {
   .firefox-btn > button {
     box-shadow: 0 5px 7px #00000020;
     margin-left: 5px;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent !important;
       color: hsl(229, 31%, 21%) !important;
       border-color: hsl(229, 31%, 21%) !important;

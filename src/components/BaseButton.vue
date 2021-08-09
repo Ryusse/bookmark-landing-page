@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ color: bgColor }"> <!-- to insert color -->
+  <div :style="{ color: bgColor }"> <!-- to inherit color -->
     <button :style="btnStyles" :class="$style['base-btn']">
       <slot></slot>
     </button>
@@ -29,10 +29,10 @@ export default {
   data() {
     return {
       btnStyles: {
-        color: this.color,
-        backgroundColor: this.bgColor,
         width: `${this.width}px`,
         height: `${this.height}px`,
+        color: this.color,
+        backgroundColor: this.bgColor,
         borderColor: this.bgColor,
       },
     };
@@ -55,19 +55,15 @@ export default {
   font-weight: 500;
   font-size: clamp(.85rem, 2.1vw, .9rem);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: transparent !important; // override inline styles
     color: inherit !important; // override inline styles
-  }
-
-  @media screen and (max-width: 700px) {
-    // width: 122% !important; // override
   }
 
   @media screen and (max-width: 400px) {
     width: 40vw !important; // override
   }
-  
 }
 
 </style>
