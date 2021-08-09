@@ -1,26 +1,32 @@
-.layout {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 2% repeat(4, 1fr) 2%;
-    grid-template-areas:
-        "header header   header   header    header  header"
-        ".   home     home     home     home   ."
-        ". features features features features ."
-        ".  footer   footer   footer   footer  .";
-    margin: auto;
-    height: auto;
-  
-    @include query(md) {
-      grid-template-columns: repeat(8, 1fr);
-  
-      grid-template-areas:
-        "header  header   header   header   header   header   header  header"
-        ".   home     home     home     home     home     home   ."
-        ". features features features features features features ."
-        ".  footer   footer   footer   footer   footer   footer  .";
-    }
+@use '../abstracts/all' as *;
 
-    .header{
-        grid-area: header;
-    }
+.layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2% repeat(4, 1fr) 2%;
+  margin: auto;
+  grid-template-areas:
+    "header header   header   header    header  header"
+    ".   home     home     home     home   ."
+    ". features features features features ."
+    ".  footer   footer   footer   footer  .";
+  height: auto;
+
+  @include query(xl) {
+    grid-template-columns: 1fr repeat(8, 1fr) 1fr;
+
+    grid-template-areas:
+    "header  header   header   header   header   header   header  header header header"
+    ".   home     home     home     home     home     home  home home   ."
+    ". features features features features features features features features."
+    "footer  footer   footer   footer   footer   footer   footer  footer footer footer";
+}
+
+  .header {
+    grid-area: header;
+  }
+
+  .hero {
+    grid-area: home;
+  }
 }

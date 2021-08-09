@@ -1,15 +1,14 @@
-body{
-    font-size: 16px;
-    font-family: $rubik;
-    font-weight: $regular;
+@use '../abstracts/all' as *;
+
+body {
+  font-size: 16px;
+  font-family: $rubik;
+  font-weight: $regular;
 }
 
-a{
-    color: $very-dark-blue;
-
+a {
+  color: $very-dark-blue;
 }
-
-
 
 //HEADER
 
@@ -21,8 +20,8 @@ a{
     text-transform: uppercase;
     @include font-size($nav-font-sizes);
 
-    &:hover,
-    &:focus{
-       color: $soft-red;
-    }
-}   
+  &:hover,
+  &:focus {
+    color: $soft-red;
+  }
+}
