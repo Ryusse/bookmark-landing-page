@@ -43,14 +43,14 @@ export default {
 <style lang="scss" module>
 
 .base-btn {
-  all: unset;
+  $delay: 500ms;
   margin: 10px 0;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
   border-width: 2px;
   border-style: solid;
-  transition: all 500ms;
+  transition: background-color $delay, color $delay, border $delay;
   box-shadow: 0px 4px 10px #00000029;
   font-weight: 500;
   font-size: clamp(.85rem, 2.1vw, .9rem);

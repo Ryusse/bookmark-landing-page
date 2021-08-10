@@ -33,7 +33,7 @@
     }
   }
 
-  //Flexbox
+  // Flexbox
   @mixin flexbox($dir: null, $jc: null, $ai: null, $gap: null) {
     display: flex;
   

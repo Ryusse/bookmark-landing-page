@@ -37,6 +37,14 @@ export default {
 <style lang="scss">
 @use '../assets/sass/abstracts/all' as *;
 
+.wrapper {
+  @include flexbox(column-reverse);
+  @include query(md) {
+    @include flexbox(row);
+    > * { flex-basis: 100% }
+  }
+}
+
 .hero__col--1 {
   @include flexbox(col, null, center);
   text-align: center;
@@ -50,12 +58,13 @@ export default {
   max-width: 380px;
   font-weight: 500;
   color: $very-dark-blue;
+  @include font-size($h1-font-sizes);
 }
 
 .hero__col__desc {
   max-width: 540px;
   margin-top: 20px;
-  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  @include font-size($p-font-sizes);
   color: $grayish-blue;
   line-height: 1.5;
 }
@@ -76,6 +85,34 @@ export default {
       color: hsl(229, 31%, 21%) !important;
       border-color: hsl(229, 31%, 21%) !important;
     }
+  }
+}
+
+.hero__col--2 {
+  position: relative;
+  background-color: coral;
+  background: url("../assets/images/illustration-hero.svg") no-repeat center;
+  background-size: contain;
+  @include query(md) { flex-basis: 100% }
+  height: max(350px, 50vw);
+  background-size: max(330px, 70vw);
+  @include query(md) {
+    height: auto;
+    background-size: contain;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 80%;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-40%);
+    background-color: $soft-blue;
+    border-radius: 5000px 0 0 5000px;
+    overflow: hidden;
+    z-index: -1;
   }
 }
 </style>

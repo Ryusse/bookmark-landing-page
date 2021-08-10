@@ -1,13 +1,18 @@
-.header{
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: 5vw 1fr 5vw;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". navbar .";
-    place-items: center;
-    
-    .navbar{
-        grid-area: navbar;
-    }
+:root {
+  --header: 40px; // change this variable value accordingly
+}
 
+.header {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". navbar .";
+  place-items: center;
+  height: var(--header);
+  overflow: hidden;
+
+  .navbar {
+    grid-area: navbar;
+  }
 }
