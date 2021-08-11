@@ -1,13 +1,12 @@
-.header{
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: 5vw 1fr 5vw;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". navbar .";
-    place-items: center;
-    
-    .navbar{
-        grid-area: navbar;
-    }
+.header {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "navbar";
+  place-items: center;
 
+  .navbar {
+    grid-area: navbar;
+  }
 }

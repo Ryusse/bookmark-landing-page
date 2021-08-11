@@ -1,49 +1,120 @@
-.navbar{
-    width: 100%;
+@use '../abstracts/all' as *;
+
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+  &__logo {
+    justify-self: start;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     place-items: center;
+    z-index: 4;
+    &.active {
+      color: $white;
+    }
+  }
 
-    &__logo{
-        justify-self: start;
-        display: grid;
-        place-items: center;
+  &__list {
+    display: none;
+    @include query(md) {
+      justify-self: end;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      place-items: center;
+      column-gap: 1.5rem;
+    }
+  }
+
+  .menu-burger {
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    justify-self: end;
+    cursor: pointer;
+    @include query(md) {
+      display: none;
     }
 
-    .menu{
-        display: grid;
-        place-items: center;
-        justify-self: end;
-        @include query(md){
-            display: none;
-        }
-
-        &__sub-menu{
-            background-color: red;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 20rem;
-            clip-path: circle(100px at 100% -10%);
-            @include transition(all .3s ease-in-out);
-        }
-
-        &__sub-menu.isOpen{
-            clip-path: circle(1000px at 100% -10%);
-        }
+    &__line .active {
+      fill: $white;
     }
+  }
 
-    &__list{
+  .menu {
+    clip-path: circle(10.2% at 100% 0);
+    transition: all 0.3s ease-in-out;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: 5.5rem 1.3fr 1.5fr 0.2fr 3rem;
+    grid-template-areas:
+      ".    .     ."
+      ".   list   ."
+      ".    .     ."
+      ".   social ."
+      ".    .     .";
+
+    &.active {
+      position: fixed;
+      display: grid;
+      z-index: 3;
+      opacity: 0.95;
+      width: 100vw;
+      height: 100vh;
+      background-color: $very-dark-blue;
+      clip-path: circle(185% at 100% 0);
+      transition: all 0.3s ease-in-out;
+      @include query(md) {
         display: none;
-        @include query(md){
-            display: grid;
-            justify-self: end;
-            grid-template-columns: 1fr 1fr 1fr;
-            place-items: center;
-            column-gap: 2rem;
-        }
+      }
+    }
+    &__social {
+      grid-area: social;
+      display: none;
+      place-items: center;
+
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". facebook twitter .";
+      gap: 1rem;
+      &.active {
+        display: grid;
+      }
     }
 
-}
+    &__facebook {
+      grid-area: facebook;
+    }
+    &__twitter {
+      grid-area: twitter;
+    }
 
+    &__list {
+      text-transform: uppercase;
+      grid-area: list;
+      display: none;
+      row-gap: 1rem;
+      opacity: 1;
+
+      &.active {
+        display: grid;
+      }
+    }
+
+    &__item {
+      display: grid;
+      place-items: center;
+      &::before {
+        content: "";
+        margin-bottom: 16px;
+        background-color: $white;
+        opacity: 0.1;
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    &__link {
+      color: $white;
+    }
+  }
+}
