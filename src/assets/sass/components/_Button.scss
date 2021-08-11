@@ -1,7 +1,6 @@
-.button{
-
+.button {
 }
 
-.button--login{
-    background-color: transparent;
+.button--login > button {
+  text-transform: uppercase;
 }
