@@ -14,9 +14,8 @@
       <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
     </ul>
 
-    <!--Menu   @click="isOpen = !isOpen"-->
-    <div class="menu" >
-
+    <!--MENU-->
+    <div class="menu" @click="showMobileMenu = !showMobileMenu">
       <div class="menu__burger">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
           <path
@@ -27,9 +26,8 @@
         </svg>
       </div>
 
-      <!-- v-if="isOpen" -->
-      <div class="menu__sub-menu" @click="isOpen()" >
-        
+      <!-- MENU CONTENT -->
+      <div class="menu__sub-menu" :class="{ active: showMobileMenu }">
         <!-- <div class="menu__logo" v-if="isOpen">
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
@@ -54,22 +52,21 @@
           </li>
         </ul> -->
       </div>
-
     </div>
+    <BaseButton class="button--login"/>
   </nav>
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue';
 export default {
-  name: "Menu",
+  name: "Navbar",
   props: ["title", "items"],
+  components: {BaseButton},
 
-  methods: {
-    
-  },
   data() {
     return {
-      
+      showMobileMenu: false,
     };
   },
 };

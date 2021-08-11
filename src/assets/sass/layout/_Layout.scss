@@ -6,7 +6,7 @@
   grid-template-columns: 2% repeat(4, 1fr) 2%;
   margin: auto;
   grid-template-areas:
-    "header header   header   header    header  header"
+    ". header   header   header    header  ."
     ".   home     home     home     home   ."
     ". features features features features ."
     ".  footer   footer   footer   footer  .";
@@ -16,7 +16,7 @@
     grid-template-columns: 1fr repeat(8, 1fr) 1fr;
 
     grid-template-areas:
-    "header  header   header   header   header   header   header  header header header"
+    ".  header   header   header   header   header   header  header header ."
     ".   home     home     home     home     home     home  home home   ."
     ". features features features features features features features features."
     "footer  footer   footer   footer   footer   footer   footer  footer footer footer";

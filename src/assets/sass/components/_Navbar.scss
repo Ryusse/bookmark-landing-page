@@ -1,48 +1,87 @@
+@use '../abstracts/all' as *;
+
 .navbar{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     place-items: center;
 
     &__logo{
         justify-self: start;
         display: grid;
         place-items: center;
+        z-index: 4;
+        &.active{
+            color: $white;
+        }
     }
 
     .menu{
         display: grid;
         place-items: center;
         justify-self: end;
+        cursor: pointer;
+        z-index: 3;
+
         @include query(md){
             display: none;
         }
 
-        &__sub-menu{
-            background-color: red;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 20rem;
-            clip-path: circle(100px at 100% -10%);
-            @include transition(all .3s ease-in-out);
+        &__burger{
+            display: grid;
+            place-items: center;
         }
 
-        &__sub-menu.isOpen{
-            clip-path: circle(1000px at 100% -10%);
+        &__sub-menu{
+            background-color: red;
+            transition: all .5s ease-in-out;
+            position:absolute;
+            width: 0rem;  
+            height: 0rem;
+            border-radius: 50%;
+            top: 30px;
+	        left: 30px;
+            transition: all .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
         }
+
+        &__sub-menu.active{
+            
+            position: absolute;
+            top: -100px;
+            right: 100px;
+            z-index: -1;
+            transition: all .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+            animation-duration: infinite;
+            animation-name: slidein;  
+        }
+
+        @keyframes slidein {
+            0% {
+                width:400;
+                height:400;
+            }
+          
+            50% {
+                width:800;
+                height:800;
+            }
+
+            100%{
+                width:1200px;
+	           height:1200px;
+            }
+          }
     }
 
     &__list{
-        display: none;
+        display: none; 
         @include query(md){
-            display: grid;
             justify-self: end;
+            display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             place-items: center;
-            column-gap: 2rem;
-        }
+            column-gap: 1.5rem;
+        }     
     }
 
 }

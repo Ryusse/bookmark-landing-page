@@ -1,9 +1,10 @@
 .header{
     padding-top: 2rem;
     display: grid;
-    grid-template-columns: 5vw 1fr 5vw;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: ". navbar .";
+    grid-template-areas: "navbar navbar navbar";
     place-items: center;
     
     .navbar{
