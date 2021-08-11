@@ -53,7 +53,7 @@
         </ul> -->
       </div>
     </div>
-    <BaseButton bgColor="hsl(0, 94%, 66%)" :width="111" class="button--login">LOGIN</BaseButton>
+    <BaseButton bgColor="hsl(0, 94%, 66%)" :width="111" class="button--login">Login</BaseButton>
   </nav>
 </template>
 
