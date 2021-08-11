@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import BaseButton from "./BaseButton.vue";
+import BaseButton from "./BaseButton.vue"; 
 
 export default {
   name: "TheHero",
@@ -39,6 +39,7 @@ export default {
 
 .wrapper {
   @include flexbox(column-reverse);
+  flex: 1;
   @include query(md) {
     @include flexbox(row);
     > * { flex-basis: 100% }
