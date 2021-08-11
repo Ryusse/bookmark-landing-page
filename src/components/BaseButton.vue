@@ -54,6 +54,7 @@ export default {
   box-shadow: 0px 4px 10px #00000029;
   font-weight: 500;
   font-size: clamp(.85rem, 2.1vw, .9rem);
+  outline: transparent;
 
   &:hover,
   &:focus {

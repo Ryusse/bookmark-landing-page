@@ -3,7 +3,7 @@
 .navbar{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
     place-items: center;
 
     &__logo{
@@ -78,7 +78,7 @@
         @include query(md){
             justify-self: end;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
             place-items: center;
             column-gap: 1.5rem;
         }     

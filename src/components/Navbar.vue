@@ -12,6 +12,17 @@
       </li>
       <li class="navbar__item"><a href="#" class="navbar__link">Pricing</a></li>
       <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link">
+          <BaseButton
+            class="button--login"
+            bgColor="hsl(0, 94%, 66%)"
+            :width="111"
+          >
+            Login
+          </BaseButton>
+        </a>
+      </li>
     </ul>
 
     <!--MENU-->
@@ -53,16 +64,15 @@
         </ul> -->
       </div>
     </div>
-    <BaseButton bgColor="hsl(0, 94%, 66%)" :width="111" class="button--login">Login</BaseButton>
   </nav>
 </template>
 
 <script>
-import BaseButton from './BaseButton.vue';
+import BaseButton from "./BaseButton.vue";
 export default {
   name: "Navbar",
   props: ["title", "items"],
-  components: {BaseButton},
+  components: { BaseButton },
 
   data() {
     return {
@@ -72,5 +82,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
