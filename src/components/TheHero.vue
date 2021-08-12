@@ -52,7 +52,7 @@ export default {
   text-align: center;
   @include query(md) {
     text-align: left;
-    @include flexbox(col, null, start);
+    @include flexbox(col, null, flex-start);
   }
 }
 
