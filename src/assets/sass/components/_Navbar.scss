@@ -3,48 +3,50 @@
 .navbar {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   place-items: center;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   &__logo {
-    justify-self: start;
-    display: grid;
-    place-items: center;
     z-index: 4;
-    &.active {
-      color: $white;
+    justify-self: start;
+    &.active{
+      
     }
   }
 
+  .burger {
+    z-index: 4;
+    justify-self: end;
+    transition: all 0.4s ease-in-out;
+
+    @include query(md) {
+      display: none;
+    }
+    &__line.active {
+      fill: $white;
+      transition: all 0.4s ease-in-out;
+    }
+  }
   &__list {
     display: none;
     @include query(md) {
       justify-self: end;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       place-items: center;
       column-gap: 1.5rem;
     }
   }
 
-  .menu-burger {
-    z-index: 4;
-    display: grid;
-    place-items: center;
-    justify-self: end;
-    cursor: pointer;
-    @include query(md) {
-      display: none;
-    }
-
-    &__line .active {
-      fill: $white;
-    }
-  }
-
   .menu {
-    clip-path: circle(10.2% at 100% 0);
-    transition: all 0.3s ease-in-out;
+    background-color: $very-dark-blue;
+    position: fixed;
+    top: 0;
+    right: 0;
+    clip-path: circle(0% at 100% 0);
+    display: grid;
     grid-template-columns: 2rem 1fr 2rem;
     grid-template-rows: 5.5rem 1.3fr 1.5fr 0.2fr 3rem;
     grid-template-areas:
@@ -53,20 +55,19 @@
       ".    .     ."
       ".   social ."
       ".    .     .";
-
     &.active {
-      position: fixed;
-      display: grid;
       z-index: 3;
       opacity: 0.95;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
-      background-color: $very-dark-blue;
-      clip-path: circle(185% at 100% 0);
-      transition: all 0.3s ease-in-out;
-      @include query(md) {
-        display: none;
-      }
+      clip-path: circle(141.2% at 100% 0);
+      transition: all 0.4s ease-in-out;
+    }
+
+    &__list {
+      grid-area: list;
+      display: grid;
+      gap: 1rem;
     }
     &__social {
       grid-area: social;
@@ -78,6 +79,7 @@
       gap: 1rem;
       &.active {
         display: grid;
+        place-items: center;
       }
     }
 
@@ -86,18 +88,6 @@
     }
     &__twitter {
       grid-area: twitter;
-    }
-
-    &__list {
-      text-transform: uppercase;
-      grid-area: list;
-      display: none;
-      row-gap: 1rem;
-      opacity: 1;
-
-      &.active {
-        display: grid;
-      }
     }
 
     &__item {
