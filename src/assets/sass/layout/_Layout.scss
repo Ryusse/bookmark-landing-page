@@ -4,7 +4,8 @@
   position: relative;
   width: 100%;
   display: grid;
-  gap: 0.2rem;
+  column-gap: 0.2rem;
+  row-gap: 3rem;
   grid-template-columns: 2% repeat(4, 1fr) 2%;
   margin: auto;
   grid-template-areas:
