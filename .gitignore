@@ -22,3 +22,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 package.json.swp
+
+# Local Netlify folder
+.netlify
