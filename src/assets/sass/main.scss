@@ -1,12 +1,12 @@
-@use 'abstracts/all';
+@use 'abstracts/all' as a;
 
-@use 'base/all';
+@use 'base/all' as b;
 
-@use 'components/all';
+@use 'components/all' as c;
 
-@use 'layout/all';
+@use 'layout/all' as d;
 
-@use 'sections/all';
+@use 'sections/all' as e;
 
-@use 'vendor/all';
+@use 'vendor/all' as f;
 
