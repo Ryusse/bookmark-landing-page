@@ -1,12 +1,12 @@
-@import 'abstracts/all';
+@forward 'abstracts/all';
 
-@import 'base/all';
+@forward 'base/all';
 
-@import 'components/all';
+@forward 'components/all';
 
-@import 'layout/all';
+@forward 'layout/all';
 
-@import 'sections/all';
+@forward 'sections/all';
 
-@import 'vendor/all';
+@forward 'vendor/all';
 

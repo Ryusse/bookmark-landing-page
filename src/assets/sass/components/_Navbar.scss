@@ -4,7 +4,6 @@
   width: 100%;
   display: grid;
   place-items: center;
-  cursor: pointer;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -28,6 +27,7 @@
   }
 
   .burger {
+    cursor: pointer;
     z-index: 4;
     justify-self: end;
     
@@ -55,11 +55,11 @@
   }
 
   .menu {
+    
     background-color: $very-dark-blue;
     position: fixed;
     top: 0;
     right: 0;
-
     clip-path: circle(0% at 100% 0);
     display: grid;
     grid-template-columns: 2rem 1fr 2rem;
@@ -84,6 +84,7 @@
     }
 
     &__list {
+      text-transform: uppercase;
       grid-area: list;
       display: grid;
       gap: 1rem;

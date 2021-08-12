@@ -6,7 +6,7 @@
   display: grid;
   column-gap: 0.2rem;
   row-gap: 3rem;
-  grid-template-columns: 2% repeat(4, 1fr) 2%;
+  grid-template-columns: 5% repeat(4, 1fr) 5%;
   margin: auto;
   grid-template-areas:
     ". header   header   header    header  ."
@@ -31,5 +31,9 @@
 
   .hero {
     grid-area: home;
+  }
+
+  .features{
+    grid-area: features;
   }
 }
