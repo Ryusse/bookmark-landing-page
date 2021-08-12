@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
     @each $fs-breakpoint, $fs-font-size in $fs-map {
       @if $fs-breakpoint == null {
@@ -31,28 +33,26 @@
     }
   }
 
-  //Flexbox
+  // Flexbox
   @mixin flexbox($dir: null, $jc: null, $ai: null, $gap: null) {
     display: flex;
   
     @if $dir == col  {
       flex-direction: column;
-    }
-    @else if $dir == column {
+    } @else if $dir == column {
       flex-direction: column;
-    }
-    @else if $dir == row {
+    } @else if $dir == row {
       flex-direction: row;
+    } @else if $dir {
+      flex-direction: $dir;
     }
-  
+
     @if $ai {
       align-items: $ai;
     }
-  
     @if $jc {
       justify-content: $jc;
     }
-  
     @if $gap {
       gap: $gap;
     }
@@ -65,4 +65,4 @@
     -ms-transition: $args;
     -o-transition: $args;
     transition: $args;
-  }
+}

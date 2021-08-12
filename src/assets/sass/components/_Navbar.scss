@@ -55,6 +55,10 @@
       ".    .     ."
       ".   social ."
       ".    .     .";
+
+    @include query(md) {
+      display: none;
+    }
     &.active {
       z-index: 3;
       opacity: 0.95;

@@ -1,20 +1,19 @@
 <template>
   <header class="header">
-    <Navbar/>
+    <Navbar />
   </header>
-
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
 
- export default {
-   name: "TheHeader",
-   components: {
+export default {
+  name: "TheHeader",
+  components: {
     Navbar,
-   },
+  },
 
-   data() {
+  data() {
     return {
       Menu: [
         {
@@ -29,13 +28,10 @@ import Navbar from "../components/Navbar.vue";
           title: "Contact",
           link: "#",
         },
-     ],
-   };
- },
+      ],
+    };
+  },
 };
-
-
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
