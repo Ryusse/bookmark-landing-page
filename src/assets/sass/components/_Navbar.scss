@@ -44,7 +44,7 @@
     background-color: $very-dark-blue;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 12px;
     clip-path: circle(0% at 100% 0);
     display: grid;
     grid-template-columns: 2rem 1fr 2rem;
@@ -72,6 +72,7 @@
       grid-area: list;
       display: grid;
       gap: 1rem;
+      
     }
     &__social {
       grid-area: social;
