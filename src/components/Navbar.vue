@@ -1,17 +1,20 @@
 <template>
   <nav class="navbar">
-    <!--LOGO-->
+    <!--Logo-->
     <div class="navbar__logo">
       <img src="../assets/images/logo-bookmark.svg" alt="" />
     </div>
 
-    <!--LIST DESKTOP-->
+    <!--Navbar Links Desktop-->
     <ul class="navbar__list">
-      <li class="navbar__item">
-        <a href="#" class="navbar__link">Features</a>
+      <li
+        class="navbar__item"
+        v-for="(navLink, index) in navLinks"
+        v-bind:key="index"
+      >
+        <a href="#" class="navbar__link">{{ navLink.item }}</a>
       </li>
-      <li class="navbar__item"><a href="#" class="navbar__link">Pricing</a></li>
-      <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
+      <!--Button Login-->
       <li class="navbar__item">
         <a href="#" class="navbar__link">
           <BaseButton
@@ -25,6 +28,7 @@
       </li>
     </ul>
 
+    <!--Menu Burger-->
     <div class="burger" @click="showMobileMenu = !showMobileMenu">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
         <path
@@ -37,17 +41,19 @@
       </svg>
     </div>
 
+    <!--Menu Mobile-->
     <div class="menu" :class="{ active: showMobileMenu }">
       <ul class="menu__list">
-        <li class="menu__item">
-          <a href="#" class="menu__link">Features</a>
+        <li
+          class="menu__item"
+          v-for="(menuLink, index) in menuLinks"
+          v-bind:key="index"
+        >
+          <a href="#" class="menu__link"> {{ menuLink.item }} </a>
         </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link">Pricing</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link">Contact</a>
-        </li>
+
+        <!--Button Login-->
+
         <li class="menu__item">
           <a href="#" class="menu__link">
             <BaseButton
@@ -61,6 +67,7 @@
         </li>
       </ul>
 
+      <!--Social Links-->
       <div class="menu__social" :class="{ active: showMobileMenu }">
         <svg
           class="menu__facebook"
@@ -102,6 +109,30 @@ export default {
   data() {
     return {
       showMobileMenu: false,
+
+      navLinks: [
+        {
+          item: "Features",
+        },
+        {
+          item: "Pricing",
+        },
+        {
+          item: "Contact",
+        },
+      ],
+
+      menuLinks: [
+        {
+          item: "Features",
+        },
+        {
+          item: "Pricing",
+        },
+        {
+          item: "Contact",
+        },
+      ],
     };
   },
 };
