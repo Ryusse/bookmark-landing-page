@@ -8,43 +8,58 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  &__logo {
+  .logo {
     z-index: 4;
     justify-self: start;
-    &.active{
-      
-    }
+    
+
+      &__text.active{
+        fill: #fff;
+        transition: all 1s ease-in-out;
+      }
+      &__circle.active{
+        fill: #fff;
+        transition: all 0.6s ease-in-out;
+      }
+      &__save.active{
+        fill: #242A45;
+        transition: all 0.6s ease-in-out;
+      }
   }
 
   .burger {
     z-index: 4;
     justify-self: end;
-    transition: all 0.4s ease-in-out;
-
+    
     @include query(md) {
       display: none;
     }
     &__line.active {
       fill: $white;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.6s ease-in-out;
     }
   }
   &__list {
     display: none;
+    
     @include query(md) {
       justify-self: end;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      column-gap: 2.5rem;
       place-items: center;
-      column-gap: 1.5rem;
     }
+  }
+
+  &__link{
+    transition: all 0.2s ease-in-out;
   }
 
   .menu {
     background-color: $very-dark-blue;
     position: fixed;
     top: 0;
-    right: 12px;
+    right: 0;
+
     clip-path: circle(0% at 100% 0);
     display: grid;
     grid-template-columns: 2rem 1fr 2rem;
@@ -110,6 +125,7 @@
 
     &__link {
       color: $white;
+      
     }
   }
 }
