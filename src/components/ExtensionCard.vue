@@ -19,9 +19,8 @@ export default {
     ext: {
       type: Object,
       required: true,
-      validator: card => {
-        return "browser" in card && "min_version" in card && typeof card.icon === "string";
-      }
+      validator: card =>
+        "browser" in card && "min_version" in card && (typeof card.icon === "string")
     }
   },
   components: {
