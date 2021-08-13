@@ -1,12 +1,12 @@
-@forward 'abstracts/all';
+@use 'abstracts/all' as a;
 
-@forward 'base/all';
+@use 'base/all' as b;
 
-@forward 'components/all';
+@use 'components/all' as c;
 
-@forward 'layout/all';
+@use 'layout/all';
 
-@forward 'sections/all';
+@use 'sections/all' as e;
 
-@forward 'vendor/all';
+@use 'vendor/all' as f;
 

@@ -38,11 +38,12 @@ export default {
 @use '../assets/sass/abstracts/all' as *;
 
 .wrapper {
-  @include flexbox(column-reverse);
   flex: 1;
+  min-height: calc(100vh - 158px);
+  @include flexbox(column-reverse);
   @include query(md) {
-    @include flexbox(row);
-    > * { flex-basis: 100% }
+    @include flexbox(row, null, center);
+    > * { flex:1 1 100% }
   }
 }
 
@@ -51,7 +52,7 @@ export default {
   text-align: center;
   @include query(md) {
     text-align: left;
-    @include flexbox(col, null, start)
+    @include flexbox(col, null, flex-start);
   }
 }
 
@@ -60,6 +61,7 @@ export default {
   font-weight: 500;
   color: $very-dark-blue;
   @include font-size($h1-font-sizes);
+  @include query(md) { max-width: none }
 }
 
 .hero__col__desc {
@@ -94,11 +96,9 @@ export default {
   background-color: coral;
   background: url("../assets/images/illustration-hero.svg") no-repeat center;
   background-size: contain;
-  @include query(md) { flex-basis: 100% }
   height: max(350px, 50vw);
   background-size: max(330px, 70vw);
   @include query(md) {
-    height: auto;
     background-size: contain;
   }
 
