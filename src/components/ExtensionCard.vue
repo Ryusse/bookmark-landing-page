@@ -19,7 +19,9 @@ export default {
     ext: {
       type: Object,
       required: true,
-      // validator: card => card.hasOwnProperty("browser") && card.hasOwnProperty("version")
+      validator: card => {
+        return "browser" in card && "min_version" in card && typeof card.icon === "string";
+      }
     }
   },
   components: {
