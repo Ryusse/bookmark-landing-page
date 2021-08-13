@@ -5,8 +5,8 @@
       <div class="hero__col hero__col--content">
         <h1 class="hero__col__title">A Simple Bookmark Manager</h1>
         <p class="hero__col__desc">
-          A clean and simple interface to organize your favourite websites. Open a
-          new browser tab and see your sites load instantly. Try it for free.
+          A clean and simple interface to organize your favourite websites. Open
+          a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div class="hero__col__btns">
           <BaseButton>Get it on Chrome</BaseButton>
@@ -25,7 +25,6 @@
 
 <script>
 import BaseButton from "./BaseButton.vue";
-import "../assets/images/illustration-hero.svg";
 
 export default {
   name: "TheHero",
@@ -105,7 +104,9 @@ export default {
   font-weight: 500;
   color: $very-dark-blue;
   @include font-size($h1-font-sizes);
-  @include query(md) { max-width: 500px }
+  @include query(md) {
+    max-width: 500px;
+  }
 }
 
 .hero__col__desc {
@@ -123,7 +124,7 @@ export default {
   @include flexbox(null, space-between);
   @include query(md) {
     max-width: 345px;
-    @include flexbox(null, flex-start)
+    @include flexbox(null, flex-start);
   }
 
   .firefox-btn > button {
