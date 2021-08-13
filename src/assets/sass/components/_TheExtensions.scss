@@ -16,11 +16,10 @@
 
 .extensions__card-wrapper {
   $card-top-margin: 40px;
-  $gap: 35px;
 
-  @include flexbox(null, space-evenly, flex-start, $gap);
+  @include flexbox(null, space-evenly, flex-start, 35px);
   flex-wrap: wrap;
-  margin: $gap 0;
+  margin: 40px 0;
   padding-top: 6px;
   width: 100%;
 
