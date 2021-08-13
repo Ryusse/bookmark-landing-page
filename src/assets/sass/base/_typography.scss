@@ -10,18 +10,53 @@ a {
   color: $very-dark-blue;
 }
 
-//HEADER
+/*Header*/
 
-.header{
-    background-color: $white;
+.header {
+  background-color: $white;
+  box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 4%);
 }
 
-.navbar__link{
-    text-transform: uppercase;
-    @include font-size($nav-font-sizes);
+.logo {
+  &__text.active {
+    fill: #fff;
+  }
+
+  &__circle.active {
+    fill: #fff;
+  }
+
+  &__save.active {
+    fill: #242a45;
+  }
+}
+
+.burger {
+  &__line.active {
+    fill: $white;
+  }
+}
+
+.navbar__link {
+  text-transform: uppercase;
+  @include font-size($nav-font-sizes);
 
   &:hover,
   &:focus {
     color: $soft-red;
   }
 }
+
+.menu {
+  background-color: $very-dark-blue;
+
+  &__item::before {
+    background-color: $white;
+  }
+
+  &__link {
+    color: $white;
+  }
+}
+
+/*Header end*/

@@ -2,68 +2,80 @@
 
 .navbar {
   width: 100%;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   place-items: center;
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 
+  /*Logo*/
   .logo {
     z-index: 4;
-    justify-self: flex-start;
-    
+    justify-self: start;
 
-      &__text.active{
-        fill: #fff;
-        transition: all 1s ease-in-out;
-      }
-      &__circle.active{
-        fill: #fff;
+    &__text {
+      transition: all 0.6s ease-in-out;
+      &.active {
         transition: all 0.6s ease-in-out;
       }
-      &__save.active{
-        fill: #242A45;
+    }
+    &__circle {
+      transition: all 0.6s ease-in-out;
+      &.active {
         transition: all 0.6s ease-in-out;
       }
+    }
+
+    &__save {
+      transition: all 0.6s ease-in-out;
+      &.active {
+        transition: all 0.6s ease-in-out;
+      }
+    }
   }
 
+  /*Menu burger*/
   .burger {
+    cursor: pointer;
     z-index: 4;
     justify-self: end;
-    
+
     @include query(md) {
       display: none;
     }
-    &__line.active {
-      fill: $white;
+    &__line {
       transition: all 0.6s ease-in-out;
+      &.active {
+        transition: all 0.6s ease-in-out;
+      }
     }
   }
+
+  /*Links on desktop*/
   &__list {
     display: none;
-    
+
     @include query(md) {
-      justify-self: end;
       display: flex;
+      place-items: center end;
       column-gap: 2.5rem;
-      place-items: center;
     }
   }
 
-  &__link{
-    transition: all 0.2s ease-in-out;
+  &__link {
+    transition: all 0.3s ease-in-out;
   }
 
+  /*Menu on mobile*/
   .menu {
-    background-color: $very-dark-blue;
     position: fixed;
     top: 0;
     right: 0;
-
+    width: 100vw;
+    height: 100vh;
     clip-path: circle(0% at 100% 0);
+    transition: all 0.4s ease-in-out;
     display: grid;
     grid-template-columns: 2rem 1fr 2rem;
-    grid-template-rows: 5.5rem 1.3fr 1.5fr 0.2fr 3rem;
+    grid-template-rows: 5.5rem auto 1.5fr auto 3rem;
     grid-template-areas:
       ".    .     ."
       ".   list   ."
@@ -83,49 +95,33 @@
       transition: all 0.4s ease-in-out;
     }
 
+    /*Menu list*/
     &__list {
+      text-transform: uppercase;
       grid-area: list;
       display: grid;
       gap: 1rem;
-      
     }
-    &__social {
-      grid-area: social;
-      display: none;
-      place-items: center;
-
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas: ". facebook twitter .";
-      gap: 1rem;
-      &.active {
-        display: grid;
-        place-items: center;
-      }
-    }
-
-    &__facebook {
-      grid-area: facebook;
-    }
-    &__twitter {
-      grid-area: twitter;
-    }
-
     &__item {
       display: grid;
       place-items: center;
       &::before {
         content: "";
         margin-bottom: 16px;
-        background-color: $white;
         opacity: 0.1;
         width: 100%;
         height: 1px;
       }
     }
-
-    &__link {
-      color: $white;
-      
+    &__social {
+      grid-area: social;
+      display: none;
+      &.active {
+        margin: auto;
+        display: flex;
+        place-items: center;
+        column-gap: 2rem;
+      }
     }
   }
 }

@@ -1,14 +1,19 @@
+@use '../abstracts/all' as *;
+
+
 .header {
+  width: 100%;
   z-index: 10;
   top: 0;
   position: sticky;
   display: grid;
-  gap: 1rem;
-  padding: 1.5rem 0 2rem 0;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "navbar";
+  padding: 1.2rem 0;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-areas: ". navbar .";
   place-items: center;
+  @include query(xl) {
+    grid-template-columns: 10% 1fr 10%;
+  }
 
   .navbar {
     grid-area: navbar;
