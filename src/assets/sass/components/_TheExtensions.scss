@@ -1,4 +1,5 @@
 @use '../abstracts/all' as *;
+@use '../base/helpers' as *;
 
 .extensions {
   grid-area: ext;
@@ -8,8 +9,8 @@
 
   &__content {
     margin-top: min(3vw, 20px);
-    max-width: 540px;
-    @include font-size($p-font-sizes);
+    max-width: 570px;
+    @extend %primary-paragraph;
   }
 }
 

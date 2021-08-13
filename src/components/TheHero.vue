@@ -36,6 +36,7 @@ export default {
 
 <style lang="scss">
 @use '../assets/sass/abstracts/all' as *;
+@use '../assets/sass/base/helpers' as *;
 
 .wrapper {
   @include query(md) {
@@ -113,8 +114,7 @@ export default {
   max-width: 540px;
   margin-top: 20px;
   color: $grayish-blue;
-  line-height: 1.5;
-  @include font-size($p-font-sizes);
+  @extend %primary-paragraph;
 }
 
 .hero__col__btns {
