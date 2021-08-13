@@ -102,17 +102,29 @@ export default {
     background-size: contain;
   }
 
-  &::before {
-    content: "";
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   height: 50%;
+  //   width: 80%;
+  //   right: -10%;
+  //   top: 50%;
+  //   transform: translateY(-40%);
+  //   background-color: $soft-blue;
+  //   border-radius: 5000px 0 0 5000px;
+  //   overflow: hidden;
+  //   z-index: -1;
+  // }
+
+  &::before{
     position: absolute;
-    height: 50%;
-    width: 80%;
-    right: -10%;
-    top: 50%;
-    transform: translateY(-40%);
+    content: "";
+    top: clamp(64px, 15vw, 90px);
+    left: 21vw;
+    width: 100vw;
+    height: 54vw;
+    max-height: 324px;
     background-color: $soft-blue;
-    border-radius: 5000px 0 0 5000px;
-    overflow: hidden;
     z-index: -1;
   }
 }
