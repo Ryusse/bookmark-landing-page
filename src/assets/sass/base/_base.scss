@@ -25,3 +25,17 @@ ul {
 a {
   text-decoration: none;
 }
+
+p {
+  color: $grayish-blue;
+}
+
+h1 {
+  color: $very-dark-blue;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  color: $very-dark-blue;
+}

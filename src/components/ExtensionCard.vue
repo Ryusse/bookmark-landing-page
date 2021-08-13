@@ -1,7 +1,7 @@
 <template>
   <div class="ext-card">
     <div class="ext-card__icon">
-      <img :src="ext.icon" alt="" aria-hidden="true" />
+      <img :src="ext.icon" alt="" aria-hidden="true" width="105" height="100" />
     </div>
     <h3 class="ext-card__title">Add to {{ ext.browser }}</h3>
     <p class="ext-card__subtitle">Minimum version {{ ext.min_version }}</p>
@@ -29,17 +29,15 @@ export default {
 </script>
 
 <style lang="scss">
+// dotted border styles
 .ext-card__btn-wrapper {
-  border-image: url("../assets/images/bg-dots.svg") 27 space;
-  border-top: 5px solid gray;
+  position: relative;
 
-  border-top-image:
-      url("../assets/images/bg-dots.svg")
-      55 /
-      5px / 
-      0
-      round;
-      border-image-repeat: space;
-
+  &::before {
+    content: url("../assets/images/bg-dots.svg");
+    position: absolute;
+    top: -10.5px;
+    width: 100%;
+  }
 }
 </style>

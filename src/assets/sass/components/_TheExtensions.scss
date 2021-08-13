@@ -3,22 +3,46 @@
 .extensions {
   grid-area: ext;
   text-align: center;
+  width: 100%;
+  @include flexbox(col, null, center);
+
+  &__content {
+    margin-top: min(3vw, 20px);
+    max-width: 540px;
+    @include font-size($p-font-sizes);
+  }
 }
 
 .extensions__card-wrapper {
+  $card-top-margin: 40px;
   $gap: 35px;
-  @include flexbox(null, center, null, $gap);
+
+  @include flexbox(null, space-evenly, flex-start, $gap);
   flex-wrap: wrap;
   margin: $gap 0;
+  padding-top: 6px;
+  width: 100%;
+
+  @include query(lg) {
+    width: 93%;
+
+    > :nth-child(2) {
+      margin-top: $card-top-margin;
+    }
+    
+    > :nth-child(3) {
+      margin-top: $card-top-margin * 2;
+    }
+  }
 }
 
 .ext-card {
   @include flexbox(col, null, center);
   width: 100%;
-  max-width: 300px;
-  border: 1px solid $grayish-blue;
+  max-width: 280px;
   border-radius: 13px;
-  padding: 50px 0 10px 0;
+  padding-top: 50px;
+  box-shadow: 0 12px 12px 1px rgba($grayish-blue, .27);
 
   &__icon {
     background-repeat: no-repeat;
