@@ -73,7 +73,9 @@ export default {
     border-radius: 5000px 0 0 5000px;
 
     @include query(md) {
-      width: 71%;
+      width: 70%;
+      height: 73%;
+      top: 30%;
     }
   }
 
@@ -89,12 +91,12 @@ export default {
   margin-top: 18vw;
   padding: 0 6vw;
   text-align: center;
-  @include flexbox(col, null, center);
+  @include flexbox(col, center, center);
   @include query(md) {
     margin-top: 0;
     text-align: left;
     padding-right: 0;
-    @include flexbox(col, null, flex-start);
+    align-items: flex-start;
   }
 }
 
