@@ -1,3 +1,42 @@
+@use '../abstracts/all' as *;
+
 .extensions {
   grid-area: ext;
+  text-align: center;
+}
+
+.extensions__card-wrapper {
+  $gap: 35px;
+  @include flexbox(null, center, null, $gap);
+  flex-wrap: wrap;
+  margin: $gap 0;
+}
+
+.ext-card {
+  @include flexbox(col, null, center);
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid $grayish-blue;
+  border-radius: 13px;
+  padding: 50px 0 10px 0;
+
+  &__icon {
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    margin: 10px 0 30px 0;
+    color: $grayish-blue;
+  }
+
+  &__btn-wrapper {
+    @include flexbox(null, center, center);
+    height: 90px;
+    width: 100%;
+    // background-color: lightblue;
+  }
 }
