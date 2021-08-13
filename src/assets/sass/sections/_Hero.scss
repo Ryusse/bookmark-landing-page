@@ -1,3 +1,7 @@
-.hero{
-    
-}
+
+// background-image property is not working here.
+// the only way I know I could do that, is by importing the image in vue file
+// and find the img path in the compiled folder. 
+// That's a lot of work for a simple task.
+// So, I'll be writing the scss code in the vue component file.
+// if you know a how to use background-image in this file. let me know 😀
