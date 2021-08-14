@@ -1,0 +1,102 @@
+<template>
+  <li class="accordion-list">
+    <button class="accordion-question" @click="expanded = !expanded">
+      <span class="accordion-question__text"> {{ question }} </span>
+      <span class="accordion-question__arrow-icon" :style="arrowIconStyles">
+        <IconArrow />
+      </span>
+    </button>
+    <transition name="answer-transition">
+      <div class="accordion-answer" v-show="expanded">
+        <p>{{ answer }}</p>
+      </div>
+    </transition>
+  </li>
+</template>
+
+<script>
+import IconArrow from "./icons/IconArrow.vue";
+
+export default {
+  name: "AccordionItem",
+  components: {
+    IconArrow
+  },
+  props: {
+    question: {
+      type: String,
+      required: true,
+    },
+    answer: {
+      type: String,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      expanded: false,
+    };
+  },
+  computed: {
+    arrowIconStyles() {
+      const SOFT_RED = "hsl(0, 94%, 66%)";
+      const SOFT_BLUE = "hsl(231, 69%, 60%)";
+
+      if (this.expanded) 
+        return {
+          color: SOFT_RED,
+          transform: "rotate(-0.5turn)"
+        }
+      else
+        return {
+          color: SOFT_BLUE,
+          transform: "rotate(0turn)"
+        }
+    },
+  }
+};
+</script>
+
+<style lang="scss">
+@use '../assets/sass/abstracts/all.scss' as *;
+@use '../assets/sass/base/helpers.scss' as *;
+
+.accordion-question {
+  all: unset;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1.3px solid lighten($grayish-blue, 30);
+  color: $very-dark-blue;
+  cursor: pointer;
+  transition: color 250ms;
+  @include flexbox(null, space-between);
+  @include font-size($p-font-sizes);
+
+  &:hover {
+    color: $soft-red;
+  }
+}
+
+.accordion-question__arrow-icon {
+  min-width: 50px;
+  @extend %grid-center;
+  transition: transform 250ms;
+}
+
+.accordion-answer {
+  @extend %primary-paragraph;
+  overflow: hidden;
+
+  > p {
+    padding-bottom: 20px;
+  }
+
+  // for padding bottom. (native padding-bottom doesn't work well when height becomes 0px)
+  &::after {
+    // content: "";
+    display: block;
+    height: 20px;
+  }
+}
+
+</style>
