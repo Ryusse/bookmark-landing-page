@@ -3,6 +3,8 @@
     <TheHeader />
     <TheHero />
     <TheExtension />
+    <TheFeatures/>
+    
   </main>
 </template>
 
@@ -10,6 +12,7 @@
 import TheHeader from "./components/TheHeader.vue";
 import TheHero from "./components/TheHero.vue";
 import TheExtension from './components/TheExtension.vue';
+import TheFeatures from "./components/TheFeatures.vue";
 
 export default {
   name: "App",
@@ -17,6 +20,7 @@ export default {
     TheHeader,
     TheHero,
     TheExtension,
+    TheFeatures,
   },
 };
 </script>
