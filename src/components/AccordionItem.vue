@@ -1,8 +1,8 @@
 <template>
-  <li class="accordion-list">
+  <li :class="{ expanded: expanded }">
     <button class="accordion-question" @click="expanded = !expanded">
       <span class="accordion-question__text"> {{ question }} </span>
-      <span class="accordion-question__arrow-icon" :style="arrowIconStyles">
+      <span class="accordion-question__arrow-icon">
         <IconArrow />
       </span>
     </button>
@@ -37,23 +37,6 @@ export default {
       expanded: false,
     };
   },
-  computed: {
-    arrowIconStyles() {
-      const SOFT_RED = "hsl(0, 94%, 66%)";
-      const SOFT_BLUE = "hsl(231, 69%, 60%)";
-
-      if (this.expanded) 
-        return {
-          color: SOFT_RED,
-          transform: "rotate(-0.5turn)"
-        }
-      else
-        return {
-          color: SOFT_BLUE,
-          transform: "rotate(0turn)"
-        }
-    },
-  }
 };
 </script>
 
@@ -80,7 +63,12 @@ export default {
 .accordion-question__arrow-icon {
   min-width: 50px;
   @extend %grid-center;
-  transition: transform 250ms;
+  transition: transform 250ms linear;
+}
+
+.expanded .accordion-question__arrow-icon {
+  color: $soft-red;
+  transform: rotate(-0.5turn);
 }
 
 .accordion-answer {
