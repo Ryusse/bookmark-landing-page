@@ -3,15 +3,7 @@
 
 .extensions {
   grid-area: ext;
-  text-align: center;
-  width: 100%;
-  @include flexbox(col, null, center);
-
-  &__content {
-    margin-top: min(3vw, 20px);
-    max-width: 570px;
-    @extend %primary-paragraph;
-  }
+  @extend %primary-title-subtitle;
 }
 
 .extensions__card-wrapper {
