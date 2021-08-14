@@ -11,7 +11,7 @@
   @include flexbox(col, null, center);
 
   > p {
-    margin-top: min(3vw, 20px);
+    margin-top: min(3vw, 23px);
     max-width: 570px;
     @extend %primary-paragraph;
   }
