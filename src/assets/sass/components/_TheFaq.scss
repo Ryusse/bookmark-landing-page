@@ -1,0 +1,15 @@
+@use '../abstracts/all' as *;
+@use '../base/helpers' as *;
+
+.faq {
+  grid-area: faq;
+  text-align: center;
+  width: 100%;
+  @include flexbox(col, null, center);
+
+  &__subtitle {
+    margin-top: min(3vw, 20px);
+    max-width: 570px;
+    @extend %primary-paragraph;
+  }
+}

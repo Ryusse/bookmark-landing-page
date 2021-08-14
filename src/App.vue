@@ -4,6 +4,7 @@
     <TheHero />
     <TheFeatures/>
     <TheExtension />
+    <TheFaq />
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import TheHeader from "./components/TheHeader.vue";
 import TheHero from "./components/TheHero.vue";
 import TheExtension from './components/TheExtension.vue';
 import TheFeatures from "./components/TheFeatures.vue";
+import TheFaq from "./components/TheFaq.vue"
 
 export default {
   name: "App",
@@ -20,6 +22,7 @@ export default {
     TheHero,
     TheExtension,
     TheFeatures,
+    TheFaq
   },
 };
 </script>

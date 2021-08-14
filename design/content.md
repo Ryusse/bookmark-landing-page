@@ -43,10 +43,7 @@ More Info
 
 ## FAQ Section
 
-Frequently Asked Questions
 
-Here are some of our FAQs. If you have any other questions you’d like 
-answered please feel free to email us.
 
 <!-- Question 1 -->
 What is Bookmark?
