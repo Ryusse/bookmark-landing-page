@@ -55,7 +55,8 @@ export default {
   @include flexbox(null, space-between);
   @include font-size($p-font-sizes);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $soft-red;
   }
 }
@@ -64,6 +65,7 @@ export default {
   min-width: 50px;
   @extend %grid-center;
   transition: transform 250ms linear;
+  color: #5267DF;
 }
 
 .expanded .accordion-question__arrow-icon {
@@ -78,13 +80,20 @@ export default {
   > p {
     padding-bottom: 20px;
   }
-
-  // for padding bottom. (native padding-bottom doesn't work well when height becomes 0px)
-  &::after {
-    // content: "";
-    display: block;
-    height: 20px;
-  }
 }
 
+.answer-transition-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.answer-transition-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.answer-transition-enter-from,
+.answer-transition-leave-to {
+  transform: translateX(20px);
+  height: 0;
+  opacity: 0;
+}
 </style>
