@@ -2,7 +2,7 @@
 # bookmark-landing-page
 
 
-[Demo](https://bookmark-landing-beta.netlify.app/)
+<a href="https://bookmark-landing-beta.netlify.app/" target="_blank"> Demo </a>
 
 
 ## Project setup
