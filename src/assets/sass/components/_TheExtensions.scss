@@ -1,0 +1,66 @@
+@use '../abstracts/all' as *;
+@use '../base/helpers' as *;
+
+.extensions {
+  grid-area: ext;
+  text-align: center;
+  width: 100%;
+  @include flexbox(col, null, center);
+
+  &__content {
+    margin-top: min(3vw, 20px);
+    max-width: 570px;
+    @extend %primary-paragraph;
+  }
+}
+
+.extensions__card-wrapper {
+  $card-top-margin: 40px;
+
+  @include flexbox(null, space-evenly, flex-start, 35px);
+  flex-wrap: wrap;
+  margin: 40px 0;
+  padding-top: 6px;
+  width: 100%;
+
+  @include query(lg) {
+    width: 93%;
+
+    > :nth-child(2) {
+      margin-top: $card-top-margin;
+    }
+    
+    > :nth-child(3) {
+      margin-top: $card-top-margin * 2;
+    }
+  }
+}
+
+.ext-card {
+  @include flexbox(col, null, center);
+  width: 100%;
+  max-width: 280px;
+  border-radius: 13px;
+  padding-top: 50px;
+  box-shadow: 0 12px 12px 1px rgba($grayish-blue, .27);
+
+  &__icon {
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    margin: 10px 0 30px 0;
+    color: $grayish-blue;
+  }
+
+  &__btn-wrapper {
+    @include flexbox(null, center, center);
+    height: 90px;
+    width: 100%;
+    // background-color: lightblue;
+  }
+}

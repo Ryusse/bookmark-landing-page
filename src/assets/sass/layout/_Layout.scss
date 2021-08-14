@@ -6,30 +6,33 @@
   display: grid;
   column-gap: 0.2rem;
   row-gap: 3rem;
-  grid-template-columns: 2% repeat(4, 1fr) 2%;
+  grid-template-columns: 5% 1fr 5%;
   margin: auto;
   grid-template-areas:
-    ". header   header   header    header  ."
-    ".   home     home     home     home   ."
-    ". features features features features ."
-    ".  footer   footer   footer   footer  .";
+    " header  header  header "
+    " hero    hero    hero   "
+    ".       features    .   "
+    ".        ext        .   "
+    " footer  footer  footer ";
   height: auto;
 
   @include query(xl) {
-    grid-template-columns: 1fr repeat(8, 1fr) 1fr;
-
-    grid-template-areas:
-    ".  header   header   header   header   header   header  header header ."
-    ".   home     home     home     home     home     home  home home   ."
-    ". features features features features features features features features."
-    "footer  footer   footer   footer   footer   footer   footer  footer footer footer";
-}
+    grid-template-columns: 10% 1fr 10%;
+  }
 
   .header {
     grid-area: header;
   }
 
   .hero {
-    grid-area: home;
+    grid-area: hero;
+  }
+
+  .features {
+    grid-area: features;
+  }
+
+  .extensions{
+    grid-area: ext;
   }
 }
