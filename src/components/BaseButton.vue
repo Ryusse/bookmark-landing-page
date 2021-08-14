@@ -57,7 +57,7 @@ export default {
   user-select: none;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: transparent !important; // override inline styles
     color: inherit !important; // override inline styles
   }

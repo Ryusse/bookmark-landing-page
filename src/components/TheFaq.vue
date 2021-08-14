@@ -15,16 +15,19 @@
         />
       </ul>
     </div>
+    <BaseButton :width="110" :height="45">More Info</BaseButton>
   </section>
 </template>
 
 <script>
 import AccordionItem from "./AccordionItem.vue";
+import BaseButton from "./BaseButton.vue";
 
 export default {
   name: "TheFaq",
   components: {
     AccordionItem,
+    BaseButton,
   },
   data() {
     return {

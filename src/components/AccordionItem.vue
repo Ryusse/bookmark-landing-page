@@ -1,6 +1,6 @@
 <template>
   <li :class="{ expanded: expanded }">
-    <button class="accordion-question" @click="expanded = !expanded">
+    <button class="accordion-question" @click="expanded = !expanded" :aria-expanded="expanded">
       <span class="accordion-question__text"> {{ question }} </span>
       <span class="accordion-question__arrow-icon">
         <IconArrow />
@@ -56,7 +56,7 @@ export default {
   @include font-size($p-font-sizes);
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: $soft-red;
   }
 }
@@ -86,14 +86,10 @@ export default {
   transition: all 0.3s ease-out;
 }
 
-.answer-transition-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
 .answer-transition-enter-from,
 .answer-transition-leave-to {
   transform: translateX(20px);
-  height: 0;
+  // height: 0;
   opacity: 0;
 }
 </style>
