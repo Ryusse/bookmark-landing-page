@@ -139,4 +139,42 @@ export default {
     }
   }
 }
+
+.hero__col--2 {
+  position: relative;
+  background-color: coral;
+  background: url("../assets/images/illustration-hero.svg") no-repeat center;
+  background-size: contain;
+  height: max(350px, 50vw);
+  background-size: max(330px, 70vw);
+  @include query(md) {
+    background-size: contain;
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   height: 50%;
+  //   width: 80%;
+  //   right: -10%;
+  //   top: 50%;
+  //   transform: translateY(-40%);
+  //   background-color: $soft-blue;
+  //   border-radius: 5000px 0 0 5000px;
+  //   overflow: hidden;
+  //   z-index: -1;
+  // }
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: clamp(64px, 15vw, 90px);
+    left: 21vw;
+    width: 100vw;
+    height: 54vw;
+    max-height: 324px;
+    background-color: $soft-blue;
+    z-index: -1;
+  }
+}
 </style>
