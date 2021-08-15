@@ -1,23 +1,24 @@
 <template>
-  <div class="features">
-    <div class="features-container">
-      <h2 class="features-container__title">Features</h2>
-      <p class="features-container__text">
+  <section class="features">
+    <div class="features__container">
+      <h2 class="features__title">Features</h2>
+      <p class="features__text">
         Our aim is to make it quick and easy for you to access your favourite
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
       </p>
-
-      <Switch/>
     </div>
-  </div>
+
+    <Tabs/>
+  </section>
 </template>
 
 <script>
-import Switch from './Switch.vue';
+import Tabs from "./Tabs.vue";
+
 export default {
   name: "TheFeatures",
-  components: {Switch}
+  components: { Tabs },
 };
 </script>
 

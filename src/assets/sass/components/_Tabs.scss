@@ -1,0 +1,100 @@
+@use '../abstracts/all' as *;
+
+.tab {
+
+  .section {
+    max-width: 40rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include query(md) {
+      flex-direction: row;
+    }
+
+    &__item {
+      position: relative;
+      padding: 1.5rem 2.5rem;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0;
+        height: 0.3rem;
+      }
+
+      &.active::before {
+        width: 40%;
+        transition: all 0.4s ease-in-out;
+
+        @include query(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .panel {
+    &__section {
+      display: none;
+
+      &.active {
+        width: 100%;
+        margin-top: 4.5rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        flex-direction: column;
+        justify-content: space-between;
+        animation-name: fadeInDownBig;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+        @include query(md) {
+          flex-direction: row;
+        }
+      }
+    }
+
+    @keyframes fadeInDownBig {
+      0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    &__section-img {
+      width: 100%;
+      height: auto;
+
+      margin-bottom: 5rem;
+      @include query(md) {
+        width: 48%;
+        margin-bottom: 0;
+      }
+    }
+
+    &__container {
+      display: flex;
+      max-width: 28rem;
+      flex-direction: column;
+      @include query(md) {
+        text-align: start;
+      }
+    }
+    &__container-title,
+    &__container-text {
+      margin-bottom: 1rem;
+    }
+  }
+}

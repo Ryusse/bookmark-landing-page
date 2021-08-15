@@ -46,7 +46,6 @@ export default {
   $delay: 500ms;
   margin: 10px 0;
   text-align: center;
-  cursor: pointer;
   border-radius: 5px;
   border-width: 2px;
   border-style: solid;
@@ -55,9 +54,10 @@ export default {
   font-weight: 500;
   font-size: clamp(.85rem, 2.1vw, .9rem);
   outline: transparent;
+  user-select: none;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-color: transparent !important; // override inline styles
     color: inherit !important; // override inline styles
   }

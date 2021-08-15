@@ -4,24 +4,25 @@
     <TheHero />
     <TheFeatures/>
     <TheExtension />
-    
-    
+    <TheFaq />
   </main>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import TheHero from "./components/TheHero.vue";
-import TheFeatures from "./components/TheFeatures.vue";
 import TheExtension from './components/TheExtension.vue';
+import TheFeatures from "./components/TheFeatures.vue";
+import TheFaq from "./components/TheFaq.vue"
 
 export default {
   name: "App",
   components: {
     TheHeader,
     TheHero,
-    TheFeatures,
     TheExtension,
+    TheFeatures,
+    TheFaq
   },
 };
 </script>
