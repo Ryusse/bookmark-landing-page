@@ -1,6 +1,5 @@
 <template>
   <nav class="navbar">
-    <!--Logo-->
     <div class="logo">
       <IconLogo :isActive="showMobileMenu" />
     </div>
@@ -31,7 +30,7 @@
       <IconClose v-else />
     </button>
 
-    <!--Menu Mobile-->
+    <!--Navbar links Mobile-->
     <div class="menu" :class="{ active: showMobileMenu }">
       <ul class="menu__list">
         <li class="menu__item" v-for="(navLink, i) in navLinks" :key="i">
@@ -43,8 +42,6 @@
             {{ navLink }}
           </a>
         </li>
-
-        <!--Button Login-->
         <li class="menu__item">
           <BaseButtonLink
             class="menu__link button--login"
@@ -69,39 +66,32 @@
 </template>
 
 <script>
+import IconLogo from "./icons/TheHeaderLogo";
+import IconMenu from "./icons/IconHamMenu.vue";
+import IconClose from "./icons/IconClose.vue";
 import BaseButtonLink from "./BaseButtonLink.vue";
 import IconFacebook from "./icons/IconFacebook.vue";
 import IconTwitter from "./icons/IconTwitter.vue";
-import IconMenu from "./icons/IconHamMenu.vue";
-import IconClose from "./icons/IconClose.vue";
-import IconLogo from "./icons/TheHeaderLogo";
 
 export default {
   name: "Navbar",
-  props: ["title", "items"],
-  components: { BaseButtonLink, IconFacebook, IconTwitter, IconMenu, IconLogo, IconClose },
+  props: {
+    navLinks: Array
+  },
+  components: {
+    IconLogo,
+    IconMenu,
+    IconClose,
+    BaseButtonLink,
+    IconFacebook,
+    IconTwitter,
+  },
 
   data() {
     return {
       showMobileMenu: false,
-
-      navLinks: ["features", "pricing", "contact"],
-
-      menuLinks: [
-        {
-          item: "Features",
-          link: "#features",
-        },
-        {
-          item: "Pricing",
-          link: "#pricing",
-        },
-        {
-          item: "Contact",
-          link: "#contact",
-        },
-      ],
     };
   },
 };
+
 </script>

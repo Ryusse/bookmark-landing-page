@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <Navbar />
+    <Navbar :navLinks="navLinks"/>
   </header>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: "TheHeader",
   components: {
     Navbar,
+  },
+  data() {
+    return {
+      navLinks: ["features", "pricing", "contact"],
+    }
   },
 };
 </script>
