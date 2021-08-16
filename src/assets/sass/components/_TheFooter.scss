@@ -1,0 +1,6 @@
+@use '../abstracts/all' as *;
+
+footer {
+  grid-area: footer;
+  background-color: $very-dark-blue;
+}

@@ -1,0 +1,45 @@
+@use "../abstracts/all" as *;
+
+.emailList {
+  grid-area: email;
+  box-sizing: border-box;
+  background-color: $soft-blue;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  @include flexbox(col, center, center);
+
+  &__subtitle {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 450px;
+    color: inherit;
+    margin-top: 29px;
+  }
+}
+
+.emailList__signup {
+  width: 100%;
+  margin-top: 29px;
+  @include flexbox(null, center, center, 0 20px);
+  flex-wrap: wrap;
+  
+  &__email {
+    box-sizing: border-box;
+    width: 300px;
+    height: 46px;
+    padding-left: 16px;
+    border-radius: 5px;
+    border: none;
+    font-size: .9rem;
+
+    &::placeholder {
+      color: $grayish-blue;
+    }
+  }
+}
