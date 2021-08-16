@@ -5,7 +5,6 @@
     <TheFeatures/>
     <TheExtension />
     <TheFaq />
-    <TheEmailList />
     <TheFooter />
   </main>
 </template>
@@ -16,7 +15,6 @@ import TheHero from "./components/TheHero.vue";
 import TheExtension from './components/TheExtension.vue';
 import TheFeatures from "./components/TheFeatures.vue";
 import TheFaq from "./components/TheFaq.vue";
-import TheEmailList from "./components/TheEmailList.vue";
 import TheFooter from "./components/TheFooter.vue";
 
 export default {
@@ -27,7 +25,6 @@ export default {
     TheExtension,
     TheFeatures,
     TheFaq,
-    TheEmailList,
     TheFooter
   },
 };

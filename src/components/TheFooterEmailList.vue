@@ -25,7 +25,7 @@
 import BaseButton from "./BaseButton.vue";
 
 export default {
-  name: "TheEmailList",
+  name: "EmailList",
   components: {
     BaseButton,
   },

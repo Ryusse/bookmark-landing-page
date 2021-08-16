@@ -1,7 +1,6 @@
 @use "../abstracts/all" as *;
 
 .emailList {
-  grid-area: email;
   box-sizing: border-box;
   background-color: $soft-blue;
   color: white;

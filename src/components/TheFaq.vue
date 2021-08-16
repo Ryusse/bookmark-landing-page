@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import AccordionItem from "./AccordionItem.vue";
+import AccordionItem from "./TheFaqAccordion.vue";
 import BaseButton from "./BaseButton.vue";
 
 export default {

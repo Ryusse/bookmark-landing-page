@@ -7,20 +7,18 @@ body {
   line-height: 1.6;
 }
 
-a {
-  color: $very-dark-blue;
-}
-
-p{
+p {
   @include font-size($p-font-sizes);
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   font-weight: $bold;
   line-height: 1.1;
 }
 
-h2{
+h2 {
   @include font-size($h2-font-sizes);
 }
 
@@ -77,8 +75,8 @@ h2{
 
 /*Features*/
 
-.features{
-  &__container{
+.features {
+  &__container {
     text-align: center;
   }
 }
@@ -87,38 +85,37 @@ h2{
   text-align: center;
   .section {
     @include font-size($tab-font-sizes);
-    &__item{
+    &__item {
       color: $grayish-blue;
-      &.active{
+      &.active {
         color: $very-dark-blue;
-        transition: all .4s ease-in-out;
+        transition: all 0.4s ease-in-out;
 
-        &::before{
+        &::before {
           background-color: $soft-red;
         }
-        
       }
-      @include query(md){
+      @include query(md) {
         border-bottom: 1px solid $grayish-blue;
       }
     }
 
-    &__item:nth-child(1){
+    &__item:nth-child(1) {
       border-top: 1px solid $grayish-blue;
       border-bottom: 1px solid $grayish-blue;
-      @include query(md){
+      @include query(md) {
         border-top: none;
       }
     }
-    &__item:nth-child(2){
+    &__item:nth-child(2) {
       border-bottom: 1px solid $grayish-blue;
     }
-    &__item:nth-child(3){
+    &__item:nth-child(3) {
       border-bottom: 1px solid $grayish-blue;
     }
   }
 
-  .panel{
+  .panel {
   }
 }
 
