@@ -29,16 +29,17 @@
           :width="125"
           :height="46"
           class="email-list__signup__btn"
+          @click="validateEmail"
         >
           Contact Us
         </BaseButton>
       </form>
     </template>
-    <template v-else>
-      <transition name="thank-note-transition">
-        <span class="email-list__thank-note">Thanks for subscribing!</span>
+    <div v-else>
+      <transition name="v-trans">
+        <span class="email-list__thank-note" role="alert">Thanks for subscribing!</span>
       </transition>
-    </template>
+    </div>
   </section>
 </template>
 
@@ -69,10 +70,27 @@ export default {
 </script>
 
 <style lang="scss">
-.invalid .input-wrapper::after {
+
+.input-wrapper::after {
   content: url("../assets/images/icon-error.svg");
   position: absolute;
   right: 10px;
-  transform: translateY(50%);
+  transform: translateY(50%) scale(0);
+  transform-origin: center;
+  transition: transform 150ms;
 }
+
+.invalid .input-wrapper::after {
+  transform: translateY(50%) scale(1);
+}
+
+.v-trans-leave-active {
+  transition: transform 1500ms ease-out;
+}
+
+.v-trans-enter-from,
+.v-trans-leave-to {
+  transform: translateY(-30px);
+}
+
 </style>

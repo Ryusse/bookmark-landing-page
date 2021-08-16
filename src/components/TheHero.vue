@@ -53,9 +53,9 @@ export default {
   height: 67vw;
   isolation: isolate;
   margin-bottom: 2.6vw;
-  // border: 1px solid #000;
   @include query(md) {
     height: 33vw;
+    max-width: 900px;
   }
 
   &::before,

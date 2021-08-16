@@ -4,7 +4,7 @@
   box-sizing: border-box;
   background-color: $soft-blue;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
   @include flexbox(col, center, center);
 
   > * {
@@ -25,9 +25,15 @@
   }
 
   &__thank-note {
+    display: block;
     margin-top: 30px;
-    font-weight: 500;;
+    font-weight: 500;
     @include font-size($tab-font-sizes);
+  }
+
+  ::selection {
+    color: $soft-blue;
+    background-color: white;
   }
 }
 
@@ -41,7 +47,7 @@
     isolation: isolate;
     position: relative;
   }
-  
+
   &__email {
     box-sizing: border-box;
     width: 300px;
@@ -49,7 +55,7 @@
     padding-left: 16px;
     border-radius: 5px;
     border: none;
-    font-size: .9rem;
+    font-size: 0.9rem;
     caret-color: black;
 
     &::placeholder {
@@ -66,7 +72,7 @@
     background: $soft-red;
     padding-top: 5px;
     z-index: -1;
-    font-size: .86rem;
+    font-size: 0.86rem;
     font-style: italic;
     border-radius: 0 0 5px 5px;
     font-weight: 500;
@@ -78,11 +84,10 @@
   }
 }
 
-.invalid.email-list__signup {
-  &__email {
-    border: 1.5px red solid;
-    caret-color: red;
-  }
+.invalid .email-list__signup__email {
+  border: 1.5px $soft-red solid;
+  caret-color: $soft-red;
+  outline: $soft-red;
 }
 
 // alert transition
@@ -91,19 +96,30 @@
   transition: transform 150ms ease-out;
 }
 
-.email-alert-transition-enter-from, 
+.email-alert-transition-enter-from,
 .email-alert-transition-leave-to {
   transform: translateY(-30px);
 }
 
 // thank-note transition
 
-.thank-note-transition-enter-active,
-.thank-note-transition-leave-active {
-  transition: transform 550ms ease-out;
+.v-trans-leave-active {
+  transition: transform 1500ms ease-out;
 }
 
-.thank-note-transition-enter-from, 
-.thank-note-transition-leave-to {
-  transform: translateY(-30px) scale(3);
+.v-trans-enter-from,
+.v-trans-leave-to {
+  transform: translateY(-30px);
+}
+
+@keyframes thanknote {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

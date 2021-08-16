@@ -7,8 +7,14 @@
 }
 
 .footer__aside {
-  @include flexbox(col, space-between, center);
+  @include flexbox(null, center);
+}
+
+.footer__aside__container {
+  width: 100%;
+  max-width: 1150px;
   padding: 45px 5vw 33px;
+  @include flexbox(col, space-between, center);
   
   @include query(md) {
     padding: 30px 5vw 24px;

@@ -12,24 +12,5 @@ export default {
   components: {
     Navbar,
   },
-
-  data() {
-    return {
-      Menu: [
-        {
-          title: "Features",
-          link: "#",
-        },
-        {
-          title: "Pricing",
-          link: "#",
-        },
-        {
-          title: "Contact",
-          link: "#",
-        },
-      ],
-    };
-  },
 };
 </script>
