@@ -3,10 +3,13 @@
 .email-list {
   box-sizing: border-box;
   background-color: $soft-blue;
-  color: white;
   text-align: center;
   padding: 50px 20px;
   @include flexbox(col, center, center);
+
+  > * {
+    color: white;
+  }
 
   &__subtitle {
     text-transform: uppercase;
@@ -20,6 +23,10 @@
     color: inherit;
     margin-top: 29px;
   }
+
+  &__thank-note {
+    margin-top: 30px;
+  }
 }
 
 .email-list__signup {
@@ -27,6 +34,11 @@
   margin-top: 29px;
   @include flexbox(null, center, center, 0 20px);
   flex-wrap: wrap;
+
+  .input-wrapper {
+    isolation: isolate;
+    position: relative;
+  }
   
   &__email {
     box-sizing: border-box;
@@ -36,13 +48,47 @@
     border-radius: 5px;
     border: none;
     font-size: .9rem;
+    caret-color: black;
 
     &::placeholder {
       color: $grayish-blue;
     }
   }
 
+  &__alert {
+    position: absolute;
+    width: 100%;
+    height: 27px;
+    left: 0;
+    bottom: -30px;
+    background: $soft-red;
+    padding-top: 5px;
+    z-index: -1;
+    font-size: .86rem;
+    font-style: italic;
+    border-radius: 0 0 5px 5px;
+    font-weight: 500;
+  }
+
   &__btn > button:hover {
     background-color: white !important;
   }
+}
+
+.invalid.email-list__signup {
+  &__email {
+    border: 1.5px red solid;
+    caret-color: red;
+  }
+}
+
+// transition
+.email-alert-transition-enter-active,
+.email-alert-transition-leave-active {
+  transition: transform 150ms ease-out;
+}
+
+.email-alert-transition-enter-from, 
+.email-alert-transition-leave-to {
+  transform: translateY(-30px);
 }
