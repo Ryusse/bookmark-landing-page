@@ -21,9 +21,9 @@
             required
           />
           <transition name="email-alert-transition">
-            <span class="email-list__signup__alert" v-if="!isEmailValid">
+            <strong class="email-list__signup__alert" v-if="!isEmailValid">
               Whoops, make sure it's an email
-            </span>
+            </strong>
           </transition>
         </div>
         <BaseButton
@@ -38,7 +38,7 @@
       </form>
     </template>
     <div v-else>
-      <transition name="v-trans">
+      <transition name="v-trans" key="alert">
         <span class="email-list__thank-note" role="alert">Thanks for subscribing!</span>
       </transition>
     </div>

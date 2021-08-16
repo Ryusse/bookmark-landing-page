@@ -14,8 +14,9 @@
 
     &__item {
       position: relative;
-      padding: 1.5rem 2.5rem;
+      padding: 1.5rem 0;
       cursor: pointer;
+      flex-basis: 100%;
 
       &::before {
         content: "";
