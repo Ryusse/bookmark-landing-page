@@ -8,6 +8,7 @@
         @submit.prevent="validateEmail"
         @keyup.enter="validateEmail"
         :class="{ invalid: !isEmailValid }"
+        novalidate
       >
         <div class="input-wrapper">
           <input
@@ -16,6 +17,7 @@
             class="email-list__signup__email"
             placeholder="Enter your email address"
             v-model="userEnteredEmail"
+            autocomplete="off"
             required
           />
           <transition name="email-alert-transition">
