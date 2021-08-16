@@ -28,8 +28,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-// dotted border styles
-
-</style>

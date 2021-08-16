@@ -43,10 +43,13 @@ h2 {
   }
 }
 
-.burger {
-  &__line.active {
-    fill: $white;
-  }
+.burger > svg {
+  $defaultMenuColor: #242A45;
+  color: $defaultMenuColor;
+}
+
+.burger.active > svg {
+  color: $white;
 }
 
 .navbar__link {
@@ -113,9 +116,6 @@ h2 {
     &__item:nth-child(3) {
       border-bottom: 1px solid $grayish-blue;
     }
-  }
-
-  .panel {
   }
 }
 

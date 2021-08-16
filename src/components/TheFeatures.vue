@@ -8,7 +8,6 @@
         them on the go.
       </p>
     </div>
-
     <Tabs/>
   </section>
 </template>
