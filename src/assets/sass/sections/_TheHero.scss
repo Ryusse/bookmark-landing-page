@@ -1,11 +1,3 @@
-
-// background-image property is not working here.
-// the only way I know I could do that, is by importing the image in vue file
-// and find the img path in the compiled folder. 
-// That's a lot of work for a simple task.
-// So, I'll be writing the scss code in the vue component file.
-// if you know a how to use background-image in this file. let me know 😀
-
 @use '../abstracts/all' as *;
 @use '../base/helpers' as *;
 
@@ -24,7 +16,6 @@
     height: 67vw;
     isolation: isolate;
     margin-bottom: 2.6vw;
-    // border: 1px solid #000;
     @include query(md) {
       height: 33vw;
     }
@@ -100,7 +91,7 @@
   
     .firefox-btn > button {
       box-shadow: 0 5px 7px #00000020;
-      margin-left: 5px;
+      margin-left: 10px;
   
       &:hover,
       &:focus {
