@@ -1,6 +1,6 @@
 @use "../abstracts/all" as *;
 
-.emailList {
+.email-list {
   box-sizing: border-box;
   background-color: $soft-blue;
   color: white;
@@ -22,7 +22,7 @@
   }
 }
 
-.emailList__signup {
+.email-list__signup {
   width: 100%;
   margin-top: 29px;
   @include flexbox(null, center, center, 0 20px);
@@ -40,5 +40,9 @@
     &::placeholder {
       color: $grayish-blue;
     }
+  }
+
+  &__btn > button:hover {
+    background-color: white !important;
   }
 }

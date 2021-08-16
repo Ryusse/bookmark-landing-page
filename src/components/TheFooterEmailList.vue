@@ -1,19 +1,19 @@
 <template>
-  <section class="emailList">
-    <span class="emailList__subtitle">35,000+ already joined</span>
-    <h2 class="emailList__title">Stay up-to-date with what we’re doing</h2>
-    <form class="emailList__signup">
+  <section class="email-list">
+    <span class="email-list__subtitle">35,000+ already joined</span>
+    <h2 class="email-list__title">Stay up-to-date with what we’re doing</h2>
+    <form class="email-list__signup">
       <input
         type="email"
         name="emailList"
-        class="emailList__signup__email"
+        class="email-list__signup__email"
         placeholder="Enter your email address"
       />
       <BaseButton
         :bgColor="'hsl(0, 94%, 66%)'"
         :width="125"
         :height="46"
-        class="emailList__signup__btn"
+        class="email-list__signup__btn"
       >
         Contact Us
       </BaseButton>
