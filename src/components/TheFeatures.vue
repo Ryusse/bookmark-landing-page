@@ -21,6 +21,3 @@ export default {
   components: { Tabs },
 };
 </script>
-
-<style scoped lang="scss">
-</style>
