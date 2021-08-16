@@ -31,14 +31,5 @@ export default {
 
 <style lang="scss">
 // dotted border styles
-.ext-card__btn-wrapper {
-  position: relative;
 
-  &::before {
-    content: url("../assets/images/bg-dots.svg");
-    position: absolute;
-    top: -10.5px;
-    width: 100%;
-  }
-}
 </style>

@@ -1,0 +1,51 @@
+@use '../abstracts/all.scss' as *;
+@use '../base/helpers.scss' as *;
+
+.accordion-question {
+  all: unset;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1.3px solid lighten($grayish-blue, 30);
+  color: $very-dark-blue;
+  cursor: pointer;
+  transition: color 250ms;
+  @include flexbox(null, space-between);
+  @include font-size($p-font-sizes);
+
+  &:hover,
+  &:focus-visible {
+    color: $soft-red;
+  }
+}
+
+.accordion-question__arrow-icon {
+  min-width: 50px;
+  @extend %grid-center;
+  transition: transform 250ms linear;
+  color: #5267df;
+}
+
+.expanded .accordion-question__arrow-icon {
+  color: $soft-red;
+  transform: rotate(-0.5turn);
+}
+
+.accordion-answer {
+  @extend %primary-paragraph;
+  overflow: hidden;
+
+  > p {
+    padding-bottom: 20px;
+  }
+}
+
+.answer-transition-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.answer-transition-enter-from,
+.answer-transition-leave-to {
+  transform: translateX(20px);
+  // height: 0;
+  opacity: 0;
+}
