@@ -84,7 +84,7 @@
   }
 }
 
-// transition
+// alert transition
 .email-alert-transition-enter-active,
 .email-alert-transition-leave-active {
   transition: transform 150ms ease-out;
@@ -93,4 +93,16 @@
 .email-alert-transition-enter-from, 
 .email-alert-transition-leave-to {
   transform: translateY(-30px);
+}
+
+// thank-note transition
+
+.thank-note-transition-enter-active,
+.thank-note-transition-leave-active {
+  transition: transform 550ms ease-out;
+}
+
+.thank-note-transition-enter-from, 
+.thank-note-transition-leave-to {
+  transform: translateY(-30px) scale(3);
 }

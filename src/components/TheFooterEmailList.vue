@@ -2,7 +2,7 @@
   <section class="email-list">
     <span class="email-list__subtitle">35,000+ already joined</span>
     <h2 class="email-list__title">Stay up-to-date with what we’re doing</h2>
-    <template v-if="!subscribed">
+    <template v-if="!isSubscribed">
       <form
         class="email-list__signup"
         @submit.prevent="validateEmail"
@@ -34,9 +34,11 @@
         </BaseButton>
       </form>
     </template>
-    <transition  v-else name="thank-note-transition">
-      <span class="email-list__thank-note">Thanks for subscribing!</span>
-    </transition>
+    <template v-else>
+      <transition name="thank-note-transition">
+        <span class="email-list__thank-note">Thanks for subscribing!</span>
+      </transition>
+    </template>
   </section>
 </template>
 
@@ -52,7 +54,7 @@ export default {
     return {
       userEnteredEmail: "",
       isEmailValid: true,
-      subscribed: false,
+      isSubscribed: false,
     };
   },
   methods: {
@@ -60,7 +62,7 @@ export default {
       const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       const isValid = pattern.test(String(this.userEnteredEmail).toLowerCase());
       this.isEmailValid = isValid;
-      this.subscribed = isValid;
+      this.isSubscribed = isValid;
     },
   },
 };
