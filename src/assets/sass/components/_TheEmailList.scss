@@ -10,9 +10,9 @@
   @include flexbox(col, center, center);
 
   &__subtitle {
-    font-size: .9rem;
     text-transform: uppercase;
     letter-spacing: 5px;
+    @include font-size($span-font-sizes);
   }
 
   &__title {
