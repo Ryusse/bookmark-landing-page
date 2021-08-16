@@ -1,4 +1,5 @@
 <template>
+  <!-- <BaseButton @click="isSubscribed = false" bgColor="coral">Reset</BaseButton> -->
   <section class="email-list">
     <span class="email-list__subtitle">35,000+ already joined</span>
     <h2 class="email-list__title">Stay up-to-date with what we’re doing</h2>
@@ -21,7 +22,11 @@
             required
           />
           <transition name="email-alert-transition">
-            <strong class="email-list__signup__alert" v-if="!isEmailValid">
+            <strong
+              class="email-list__signup__alert"
+              v-if="!isEmailValid"
+              role="alert"
+            >
               Whoops, make sure it's an email
             </strong>
           </transition>
@@ -37,11 +42,11 @@
         </BaseButton>
       </form>
     </template>
-    <div v-else>
-      <transition name="v-trans" key="alert">
-        <span class="email-list__thank-note" role="alert">Thanks for subscribing!</span>
-      </transition>
-    </div>
+    <transition name="thank-note-transition">
+      <span class="email-list__thank-note" v-if="isSubscribed">
+        Thanks for subscribing!
+      </span>
+    </transition>
   </section>
 </template>
 
@@ -84,15 +89,6 @@ export default {
 
 .invalid .input-wrapper::after {
   transform: translateY(50%) scale(1);
-}
-
-.v-trans-leave-active {
-  transition: transform 1500ms ease-out;
-}
-
-.v-trans-enter-from,
-.v-trans-leave-to {
-  transform: translateY(-30px);
 }
 
 </style>

@@ -103,20 +103,22 @@
 
 // thank-note transition
 
-.v-trans-leave-active {
-  transition: transform 1500ms ease-out;
+.thank-note-transition-enter-active,
+.thank-note-transition-leave-active {
+  transition: transform 300ms ease-out;
 }
 
-.v-trans-enter-from,
-.v-trans-leave-to {
-  transform: translateY(-30px);
+.thank-note-transition-enter-to,
+.thank-note-transition-leave-to {
+  // transform: scale(1.2);
+  animation: thanknote 350ms ease-out;
 }
 
 @keyframes thanknote {
   0% {
-    transform: scale(0);
+    transform: scale(0.4);
   }
-  80% {
+  75% {
     transform: scale(1.1);
   }
   100% {
