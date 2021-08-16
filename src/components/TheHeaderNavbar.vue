@@ -75,13 +75,7 @@
           v-for="(menuLink, index) in menuLinks"
           v-bind:key="index"
         >
-          <a
-            :href="menuLink.link"
-            class="menu__link"
-            @click="showMobileMenu = false"
-          >
-            {{ menuLink.item }}
-          </a>
+          <a :href="menuLink.link" class="menu__link" @click="showMobileMenu=false"> {{ menuLink.item }} </a>
         </li>
 
         <!--Button Login-->
@@ -137,6 +131,7 @@ export default {
   name: "Navbar",
   props: ["title", "items"],
   components: { BaseButton },
+  
 
   data() {
     return {
