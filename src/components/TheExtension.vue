@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import ExtensionCard from './ExtensionCard.vue';
+import ExtensionCard from './TheExtensionCard.vue';
 
 import IconChrome from '../assets/images/logo-chrome.svg';
 import IconFirefox from '../assets/images/logo-firefox.svg';

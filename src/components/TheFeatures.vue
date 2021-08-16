@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Tabs from "./Tabs.vue";
+import Tabs from "./TheFeaturesTabs.vue";
 
 export default {
   name: "TheFeatures",
