@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import BaseButton from "./BaseButton.vue";
+import BaseButton from "../Base/BaseButton.vue";
 
 export default {
   name: "EmailList",
@@ -79,7 +79,7 @@ export default {
 <style lang="scss">
 
 .input-wrapper::after {
-  content: url("../assets/images/icon-error.svg");
+  content: url("../../assets/images/icon-error.svg");
   position: absolute;
   right: 10px;
   transform: translateY(50%) scale(0);

@@ -2,7 +2,7 @@
   <aside class="footer__aside">
     <div class="footer__aside__container">
       <a href="#" class="footer__aside__logo">
-        <img src="../assets/images/logo-bookmark-white.svg" alt="bookmark" />
+        <img src="../../assets/images/logo-bookmark-white.svg" alt="bookmark" />
       </a>
       <nav class="footer__nav">
         <ul class="footer__nav__ul">
@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import IconFacebook from './icons/IconFacebook.vue';
-import IconTwitter from "./icons/IconTwitter.vue";
+import IconFacebook from '../icons/IconFacebook.vue';
+import IconTwitter from "../icons/IconTwitter.vue";
 
 export default {
   name: "FooterNav",

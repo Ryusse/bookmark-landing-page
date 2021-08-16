@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import IconArrow from "./icons/IconArrow.vue";
+import IconArrow from "../icons/IconArrow.vue";
 
 export default {
   name: "AccordionItem",

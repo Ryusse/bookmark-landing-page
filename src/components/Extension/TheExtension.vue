@@ -11,9 +11,9 @@
 <script>
 import ExtensionCard from './TheExtensionCard.vue';
 
-import IconChrome from '../assets/images/logo-chrome.svg';
-import IconFirefox from '../assets/images/logo-firefox.svg';
-import IconOpera from '../assets/images/logo-opera.svg';
+import IconChrome from '../../assets/images/logo-chrome.svg';
+import IconFirefox from '../../assets/images/logo-firefox.svg';
+import IconOpera from '../../assets/images/logo-opera.svg';
 
 export default {
   name: "TheExtension",

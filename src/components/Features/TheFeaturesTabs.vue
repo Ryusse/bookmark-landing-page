@@ -38,7 +38,7 @@
       >
           <img
           class="panel__section-img"
-          src="../assets/images/illustration-features-tab-1.svg"
+          src="../../assets/images/illustration-features-tab-1.svg"
           alt=""
         />
         <div class="panel__container">
@@ -60,7 +60,7 @@
       >
         <img
           class="panel__section-img"
-          src="../assets/images/illustration-features-tab-2.svg"
+          src="../../assets/images/illustration-features-tab-2.svg"
           alt=""
         />
         <div class="panel__container">
@@ -81,7 +81,7 @@
       >
         <img
           class="panel__section-img"
-          src="../assets/images/illustration-features-tab-3.svg"
+          src="../../assets/images/illustration-features-tab-3.svg"
           alt=""
         />
         <div class="panel__container">
@@ -98,7 +98,8 @@
 </template>
 
 <script>
-import BaseButtonLink from "./BaseButtonLink.vue";
+import BaseButtonLink from "../Base/BaseButtonLink.vue";
+
 export default {
   name: "Tabs",
   components: { BaseButtonLink },

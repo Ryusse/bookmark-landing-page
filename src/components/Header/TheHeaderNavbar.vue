@@ -66,12 +66,12 @@
 </template>
 
 <script>
-import IconLogo from "./icons/TheHeaderLogo";
-import IconMenu from "./icons/IconHamMenu.vue";
-import IconClose from "./icons/IconClose.vue";
-import BaseButtonLink from "./BaseButtonLink.vue";
-import IconFacebook from "./icons/IconFacebook.vue";
-import IconTwitter from "./icons/IconTwitter.vue";
+import IconLogo from "../icons/TheHeaderLogo.vue";
+import IconMenu from "../icons/IconHamMenu.vue";
+import IconClose from "../icons/IconClose.vue";
+import BaseButtonLink from "../Base/BaseButtonLink.vue";
+import IconFacebook from "../icons/IconFacebook.vue";
+import IconTwitter from "../icons/IconTwitter.vue";
 
 export default {
   name: "Navbar",
@@ -86,7 +86,6 @@ export default {
     IconFacebook,
     IconTwitter,
   },
-
   data() {
     return {
       showMobileMenu: false,

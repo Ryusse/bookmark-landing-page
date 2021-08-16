@@ -21,7 +21,7 @@
 
 <script>
 import AccordionItem from "./TheFaqAccordion.vue";
-import BaseButtonLink from "./BaseButtonLink.vue";
+import BaseButtonLink from "../Base/BaseButtonLink.vue";
 
 export default {
   name: "TheFaq",

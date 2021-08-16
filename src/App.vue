@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
-import TheHero from "./components/TheHero.vue";
-import TheExtension from './components/TheExtension.vue';
-import TheFeatures from "./components/TheFeatures.vue";
-import TheFaq from "./components/TheFaq.vue";
-import TheFooter from "./components/TheFooter.vue";
+import TheHeader from "./components/Header/TheHeader.vue";
+import TheHero from "./components/Hero/TheHero.vue";
+import TheExtension from './components/Extension/TheExtension.vue';
+import TheFeatures from "./components/Features/TheFeatures.vue";
+import TheFaq from "./components/Faq/TheFaq.vue";
+import TheFooter from "./components/Footer/TheFooter.vue";
 
 export default {
   name: "App",
