@@ -1,14 +1,18 @@
 <template>
   <span :style="{ color: bgColor }"> <!-- to inherit color -->
-    <button :style="btnStyles" :class="$style['base-btn']">
+    <a :href="url" :style="btnStyles" :class="$style['base-link']">
       <slot></slot>
-    </button>
+    </a>
   </span>
 </template>
 
 <script>
 export default {
   props: {
+    url: {
+      type: String,
+      default: '#'
+    },
     width: {
       type: Number,
       default: 160,
@@ -42,7 +46,7 @@ export default {
 
 <style lang="scss" module>
 
-.base-btn {
+.base-link {
   $delay: 500ms;
   margin: 10px 0;
   text-align: center;
@@ -55,6 +59,10 @@ export default {
   font-size: clamp(.85rem, 2.1vw, .9rem);
   outline: transparent;
   user-select: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover,
   &:focus-visible {

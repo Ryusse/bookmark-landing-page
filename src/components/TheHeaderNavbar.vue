@@ -42,15 +42,13 @@
       </li>
       <!--Button Login-->
       <li class="navbar__item">
-        <a href="#" class="navbar__link">
-          <BaseButton
-            class="button--login"
-            bgColor="hsl(0, 94%, 66%)"
-            :width="111"
-          >
-            Login
-          </BaseButton>
-        </a>
+        <BaseButtonLink
+          class="button--login navbar__link"
+          bgColor="hsl(0, 94%, 66%)"
+          :width="111"
+        >
+          Login
+        </BaseButtonLink>
       </li>
     </ul>
 
@@ -75,21 +73,25 @@
           v-for="(menuLink, index) in menuLinks"
           v-bind:key="index"
         >
-          <a :href="menuLink.link" class="menu__link" @click="showMobileMenu=false"> {{ menuLink.item }} </a>
+          <a
+            :href="menuLink.link"
+            class="menu__link"
+            @click="showMobileMenu = false"
+          >
+            {{ menuLink.item }}
+          </a>
         </li>
 
         <!--Button Login-->
 
         <li class="menu__item">
-          <a href="#" class="menu__link">
-            <BaseButton
-              class="button--login"
-              bgColor="hsl(0, 94%, 66%)"
-              :width="111"
-            >
-              Login
-            </BaseButton>
-          </a>
+          <BaseButtonLink
+            class="menu__link button--login"
+            bgColor="hsl(0, 94%, 66%)"
+            :width="111"
+          >
+            Login
+          </BaseButtonLink>
         </li>
       </ul>
 
@@ -126,12 +128,12 @@
 </template>
 
 <script>
-import BaseButton from "./BaseButton.vue";
+import BaseButtonLink from "./BaseButtonLink.vue";
+
 export default {
   name: "Navbar",
   props: ["title", "items"],
-  components: { BaseButton },
-  
+  components: { BaseButtonLink },
 
   data() {
     return {
