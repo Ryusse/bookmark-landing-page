@@ -5,7 +5,7 @@
   width: 100%;
   display: grid;
   column-gap: 0.2rem;
-  row-gap: 3rem;
+  row-gap: 5rem;
   grid-template-columns: 5% 1fr 5%;
   margin: auto;
   grid-template-areas:
@@ -31,5 +31,12 @@
 
   .features {
     grid-area: features;
+  }
+
+  .extensions{
+    grid-area: ext;
+  }
+  .faq{
+    grid-area: faq;
   }
 }

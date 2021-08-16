@@ -1,95 +1,26 @@
 <template>
-  <div class="features">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In saepe obcaecati
-    maiores facilis, magni voluptate. Quisquam aut, et hic ad, neque fugiat odit
-    asperiores odio ipsum harum laborum eveniet sequi. Lorem ipsum dolor, sit
-    amet consectetur adipisicing elit. In saepe obcaecati maiores facilis, magni
-    voluptate. Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum
-    harum laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. In saepe obcaecati maiores facilis, magni voluptate.
-    Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum harum
-    laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur adipisicing
-    elit. In saepe obcaecati maiores facilis, magni voluptate. Quisquam aut, et
-    hic ad, neque fugiat odit asperiores odio ipsum harum laborum eveniet sequi.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In saepe obcaecati
-    maiores facilis, magni voluptate. Quisquam aut, et hic ad, neque fugiat odit
-    asperiores odio ipsum harum laborum eveniet sequi. Lorem ipsum dolor, sit
-    amet consectetur adipisicing elit. In saepe obcaecati maiores facilis, magni
-    voluptate. Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum
-    harum laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. In saepe obcaecati maiores facilis, magni voluptate.
-    Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum harum
-    laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur adipisicing
-    elit. In saepe obcaecati maiores facilis, magni voluptate. Quisquam aut, et
-    hic ad, neque fugiat odit asperiores odio ipsum harum laborum eveniet sequi.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In saepe obcaecati
-    maiores facilis, magni voluptate. Quisquam aut, et hic ad, neque fugiat odit
-    asperiores odio ipsum harum laborum eveniet sequi. Lorem ipsum dolor, sit
-    amet consectetur adipisicing elit. In saepe obcaecati maiores facilis, magni
-    voluptate. Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum
-    harum laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. In saepe obcaecati maiores facilis, magni voluptate.
-    Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum harum
-    laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur adipisicing
-    elit. In saepe obcaecati maiores facilis, magni voluptate. Quisquam aut, et
-    hic ad, neque fugiat odit asperiores odio ipsum harum laborum eveniet sequi.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In saepe obcaecati
-    maiores facilis, magni voluptate. Quisquam aut, et hic ad, neque fugiat odit
-    asperiores odio ipsum harum laborum eveniet sequi. Lorem ipsum dolor, sit
-    amet consectetur adipisicing elit. In saepe obcaecati maiores facilis, magni
-    voluptate. Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum
-    harum laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. In saepe obcaecati maiores facilis, magni voluptate.
-    Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum harum
-    laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur adipisicing
-    elit. In saepe obcaecati maiores facilis, magni voluptate. Quisquam aut, et
-    hic ad, neque fugiat odit asperiores odio ipsum harum laborum eveniet sequi.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In saepe obcaecati
-    maiores facilis, magni voluptate. Quisquam aut, et hic ad, neque fugiat odit
-    asperiores odio ipsum harum laborum eveniet sequi. Lorem ipsum dolor, sit
-    amet consectetur adipisicing elit. In saepe obcaecati maiores facilis, magni
-    voluptate. Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum
-    harum laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. In saepe obcaecati maiores facilis, magni voluptate.
-    Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum harum
-    laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur adipisicing
-    elit. In saepe obcaecati maiores facilis, magni voluptate. Quisquam aut, et
-    hic ad, neque fugiat odit asperiores odio ipsum harum laborum eveniet sequi.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In saepe obcaecati
-    maiores facilis, magni voluptate. Quisquam aut, et hic ad, neque fugiat odit
-    asperiores odio ipsum harum laborum eveniet sequi. Lorem ipsum dolor, sit
-    amet consectetur adipisicing elit. In saepe obcaecati maiores facilis, magni
-    voluptate. Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum
-    harum laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. In saepe obcaecati maiores facilis, magni voluptate.
-    Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum harum
-    laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur adipisicing
-    elit. In saepe obcaecati maiores facilis, magni voluptate. Quisquam aut, et
-    hic ad, neque fugiat odit asperiores odio ipsum harum laborum eveniet sequi.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In saepe obcaecati
-    maiores facilis, magni voluptate. Quisquam aut, et hic ad, neque fugiat odit
-    asperiores odio ipsum harum laborum eveniet sequi. Lorem ipsum dolor, sit
-    amet consectetur adipisicing elit. In saepe obcaecati maiores facilis, magni
-    voluptate. Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum
-    harum laborum eveniet sequi. Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. In saepe obcaecati maiores facilis, magni voluptate.
-    Quisquam aut, et hic ad, neque fugiat odit asperiores odio ipsum harum
-    laborum eveniet sequi.
-  </div>
+  <section class="features">
+    <div class="features__container">
+      <h2 class="features__title">Features</h2>
+      <p class="features__text">
+        Our aim is to make it quick and easy for you to access your favourite
+        websites. Your bookmarks sync between your devices so you can access
+        them on the go.
+      </p>
+    </div>
+
+    <Tabs/>
+  </section>
 </template>
 
 <script>
+import Tabs from "./Tabs.vue";
+
 export default {
   name: "TheFeatures",
+  components: { Tabs },
 };
 </script>
 
 <style scoped lang="scss">
-@use '../assets/sass/base/helpers.scss' as *;
-
-.features {
-  margin: 25rem 0;
-  @extend %primary-title-subtitle;
-}
-
 </style>
