@@ -33,12 +33,20 @@
   
   &__ul {
     margin: 20px 0 30px 0;
+    letter-spacing: 2px;
     @include flexbox(col, null, null, 30px);
-    @include font-size($footer-font-sizes);
+    @include font-size($nav-font-sizes);
     
     @include query(md) {
       margin: 0;
       @include flexbox(row, null, null, 20px);
+    }
+
+    &__li {
+      transition: color 300ms;
+      &:hover {
+        color: $soft-red;
+      }
     }
   }
 }
@@ -46,4 +54,11 @@
 .footer__sm-icons {
   @include flexbox(null, flex-end, center, 20px);
   flex: 1 1 20%;
+  
+  > a {
+    transition: color 310ms;
+    &:hover {
+      color: $soft-red;
+    }
+  }
 }

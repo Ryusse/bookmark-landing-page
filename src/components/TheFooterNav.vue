@@ -12,18 +12,25 @@
     </nav>
     <div class="footer__sm-icons">
       <a href="#" title="follow us on facebook">
-        <img src="../assets/images/icon-facebook.svg" alt="" />
+        <IconFacebook />
       </a>
       <a href="#" title="follow us on twitter">
-        <img src="../assets/images/icon-twitter.svg" alt="" />
+        <IconTwitter />
       </a>
     </div>
   </aside>
 </template>
 
 <script>
+import IconFacebook from './icons/IconFacebook.vue';
+import IconTwitter from "./icons/IconTwitter.vue";
+
 export default {
   name: "FooterNav",
+  components: {
+    IconFacebook,
+    IconTwitter
+  },
   data() {
     return {
       navList: ["Features", "Pricing", "Contact"],
