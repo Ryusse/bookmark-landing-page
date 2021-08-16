@@ -1,11 +1,11 @@
 @use '../abstracts/all' as *;
 
 .tab {
-
   .section {
-    max-width: 40rem;
+    width: 100%;
     margin: auto;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 
     @include query(md) {
@@ -52,7 +52,7 @@
         flex-direction: column;
         justify-content: space-between;
         animation-name: fadeInDownBig;
-        animation-duration: 1s;
+        animation-duration: 1.5s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
 
@@ -65,11 +65,9 @@
     @keyframes fadeInDownBig {
       0% {
         opacity: 0;
-        transform: translateX(-2000px);
       }
       100% {
         opacity: 1;
-        transform: translateX(0);
       }
     }
 
@@ -86,7 +84,7 @@
 
     &__container {
       display: flex;
-      max-width: 28rem;
+      max-width: 29rem;
       flex-direction: column;
       @include query(md) {
         text-align: start;
