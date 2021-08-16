@@ -26,6 +26,8 @@
 
   &__thank-note {
     margin-top: 30px;
+    font-weight: 500;;
+    @include font-size($tab-font-sizes);
   }
 }
 

@@ -34,7 +34,9 @@
         </BaseButton>
       </form>
     </template>
-    <h3 v-else class="email-list__thank-note">Thanks for subscribing!</h3>
+    <transition  v-else name="thank-note-transition">
+      <span class="email-list__thank-note">Thanks for subscribing!</span>
+    </transition>
   </section>
 </template>
 
