@@ -92,6 +92,11 @@
         text-align: start;
       }
     }
+
+    &__container-title {
+      @include font-size($h3-font-sizes);
+    }
+    
     &__container-title,
     &__container-text {
       margin-bottom: 1rem;
