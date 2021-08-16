@@ -7,7 +7,7 @@
     <!--Navbar Links Desktop-->
     <ul class="navbar__list">
       <li class="navbar__item" v-for="(navLink, i) in navLinks" :key="i">
-        <a :href="`#a${navLink}`" class="navbar__link">{{ navLink }}</a>
+        <a :href="`#${navLink}`" class="navbar__link">{{ navLink }}</a>
       </li>
       <li class="navbar__item">
         <BaseButtonLink
