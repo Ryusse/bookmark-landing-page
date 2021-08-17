@@ -52,8 +52,10 @@
 
 <script>
 import BaseButton from "../Base/BaseButton.vue";
+// import useVuelidate from '@vuelidate/core'
+// import { required, email, minLength } from '@vuelidate/validators'
 
-export default {
+export default { 
   name: "EmailList",
   components: {
     BaseButton,
@@ -73,6 +75,13 @@ export default {
       this.isSubscribed = isValid;
     },
   },
+  // validations: {
+  //   userEnteredEmail: {
+  //     required,
+  //     email,
+  //     minLength: minLength(5),
+  //   },
+  // },
 };
 </script>
 
