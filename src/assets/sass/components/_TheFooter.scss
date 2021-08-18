@@ -6,6 +6,10 @@
   color: white;
 }
 
+.footer a {
+  &:focus-visible { outline: $soft-blue 2px solid }
+}
+
 .footer__aside {
   @include flexbox(null, center);
 }
@@ -15,12 +19,22 @@
   max-width: 1150px;
   padding: 30px 5vw 24px;
   @include flexbox(col, null, center, 30px);
-  @include query(md) { @include flexbox(row, null, center, 6vw) }
+  @include query(md) { @include flexbox(row, null, center, 5vw) }
+}
+
+.footer__aside__logo-wrapper {
+  flex: 1 1 20%;
+  padding: 4px 0 4px 4px;
 }
 
 .footer__aside__logo {
-  flex:1 1 20%;
+  // flex:1 1 20%;
+  // height: 26px;
+  // padding: 4px 0 4px 4px;
+
+  display: inline-block;
   height: 26px;
+  padding: 7px 10px;
 }
 
 .footer__nav {
@@ -31,24 +45,27 @@
   
   &__ul {
     @include flexbox(col, null, null, 30px);
-    @include query(md) {  @include flexbox(row, null, null, 37px) }
+    @include query(md) {  @include flexbox(row, null, null, 25px) }
     @include font-size($footer-nav-font-sizes);
     letter-spacing: 2px;
 
     &__li {
       transition: color 300ms;
       &:hover { color: $soft-red; }
+      > a { padding: 10px }
     }
   }
 }
 
 .footer__sm-icons {
   flex: 1 1 20%;
-  @include flexbox(null, flex-end, center, 30px);
+  @include flexbox(null, flex-end, center, 7px);
   margin-top: 5px;
   
   > a {
+    padding: 10px 10px 3px 10px;
     transition: color 310ms;
+    
     &:hover { color: $soft-red }
   }
 }

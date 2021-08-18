@@ -67,9 +67,15 @@
     border: none;
     font-size: 0.9rem;
     caret-color: black;
+    transition: box-shadow 200ms;
 
     &::placeholder {
       color: $grayish-blue;
+    }
+
+    &:focus-visible { 
+      box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, .2);
+      outline: transparent;
     }
   }
 
@@ -86,6 +92,7 @@
     font-style: italic;
     border-radius: 0 0 5px 5px;
     font-weight: $bold;
+    box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, .2);
   }
 
   &__btn {

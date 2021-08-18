@@ -63,7 +63,11 @@
   }
 
   &__link {
-    transition: all 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline: solid 2px $soft-red;
+    }
   }
 
   /*Menu on mobile*/

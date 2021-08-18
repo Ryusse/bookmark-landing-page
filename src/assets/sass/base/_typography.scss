@@ -66,8 +66,7 @@ a {
   text-transform: uppercase;
   @include font-size($nav-font-sizes);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $soft-red;
   }
 }
