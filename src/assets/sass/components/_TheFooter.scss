@@ -13,58 +13,42 @@
 .footer__aside__container {
   width: 100%;
   max-width: 1150px;
-  padding: 45px 5vw 33px;
-  @include flexbox(col, space-between, center);
-  
-  @include query(md) {
-    padding: 30px 5vw 24px;
-    @include flexbox(row, space-between, center);
-  }
+  padding: 30px 5vw 24px;
+  @include flexbox(col, null, center, 30px);
+  @include query(md) { @include flexbox(row, null, center, 6vw) }
 }
 
 .footer__aside__logo {
+  flex:1 1 20%;
   height: 26px;
-  flex: 1 1 20%;
-  
-  @include query(md) {    
-    margin-right: 6vw;
-  }
 }
 
 .footer__nav {
+  flex:1 1 60%;
   text-transform: uppercase;
   justify-self: flex-start;
-  flex: 1 1 60%;
   text-align: center;
   
   &__ul {
-    margin: 20px 0 30px 0;
-    letter-spacing: 2px;
     @include flexbox(col, null, null, 30px);
-    @include font-size($nav-font-sizes);
-    
-    @include query(md) {
-      margin: 0;
-      @include flexbox(row, null, null, 20px);
-    }
+    @include query(md) {  @include flexbox(row, null, null, 37px) }
+    @include font-size($footer-nav-font-sizes);
+    letter-spacing: 2px;
 
     &__li {
       transition: color 300ms;
-      &:hover {
-        color: $soft-red;
-      }
+      &:hover { color: $soft-red; }
     }
   }
 }
 
 .footer__sm-icons {
-  @include flexbox(null, flex-end, center, 20px);
   flex: 1 1 20%;
+  @include flexbox(null, flex-end, center, 30px);
+  margin-top: 5px;
   
   > a {
     transition: color 310ms;
-    &:hover {
-      color: $soft-red;
-    }
+    &:hover { color: $soft-red }
   }
 }

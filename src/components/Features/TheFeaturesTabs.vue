@@ -48,7 +48,7 @@
             interface gives you complete control over how you manage your
             favourite sites.
           </p>
-          <BaseButtonLink>More Info</BaseButtonLink>
+          <BaseButtonLink class="panel__more-info">More Info</BaseButtonLink>
         </div>
       </div>
 

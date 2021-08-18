@@ -31,7 +31,6 @@
 }
 
 .accordion-answer {
-  @extend %primary-paragraph;
   overflow: hidden;
 
   > p {

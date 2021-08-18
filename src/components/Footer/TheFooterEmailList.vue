@@ -84,20 +84,3 @@ export default {
   // },
 };
 </script>
-
-<style lang="scss">
-
-.input-wrapper::after {
-  content: url("../../assets/images/icon-error.svg");
-  position: absolute;
-  right: 10px;
-  transform: translateY(50%) scale(0);
-  transform-origin: center;
-  transition: transform 150ms;
-}
-
-.invalid .input-wrapper::after {
-  transform: translateY(50%) scale(1);
-}
-
-</style>

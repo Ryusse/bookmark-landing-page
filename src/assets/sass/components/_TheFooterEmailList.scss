@@ -27,7 +27,7 @@
   &__thank-note {
     display: block;
     margin-top: 30px;
-    font-weight: 500;
+    font-weight: $bold;
     @include font-size($tab-font-sizes);
   }
 
@@ -39,6 +39,7 @@
 
 .email-list__signup {
   width: 100%;
+  max-width: 445px;
   margin-top: 29px;
   @include flexbox(null, center, center, 0 20px);
   flex-wrap: wrap;
@@ -46,6 +47,15 @@
   .input-wrapper {
     isolation: isolate;
     position: relative;
+
+    &::after {
+      content: url("assets/images/icon-error.svg");
+      position: absolute;
+      right: 10px;
+      transform: translateY(50%) scale(0);
+      transform-origin: center;
+      transition: transform 150ms;
+    }
   }
 
   &__email {
@@ -75,12 +85,22 @@
     font-size: 0.86rem;
     font-style: italic;
     border-radius: 0 0 5px 5px;
-    font-weight: 500;
+    font-weight: $bold;
   }
 
-  &__btn > button:hover,
-  &__btn > button:focus {
-    background-color: white !important;
+  &__btn {
+    flex-grow: 1;
+
+    > button {
+      width: 100% !important;
+      min-width: 125px;
+      max-width: 300px;
+
+      &:hover,
+      &:focus {
+        background-color: white !important;
+      }
+    }
   }
 }
 
@@ -90,7 +110,12 @@
   outline: $soft-red;
 }
 
+.invalid .input-wrapper::after {
+  transform: translateY(50%) scale(1);
+}
+
 // alert transition
+
 .email-alert-transition-enter-active,
 .email-alert-transition-leave-active {
   transition: transform 150ms ease-out;

@@ -1,5 +1,5 @@
 <template>
-  <section class="faq">
+  <section class="faq primary-title-subtitle">
     <h2 class="faq__title">Frequently Asked Questions</h2>
     <p class="faq__subtitle">
       Here are some of our FAQs. If you have any other questions you’d like

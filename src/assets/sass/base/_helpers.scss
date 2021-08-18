@@ -1,11 +1,6 @@
 @use '../abstracts/all' as *;
 
-%primary-paragraph {
-  @include font-size($p-font-sizes);
-  line-height: 1.5;
-}
-
-%primary-title-subtitle {
+.primary-title-subtitle {
   text-align: center;
   width: 100%;
   @include flexbox(col, null, center);
@@ -13,7 +8,6 @@
   > p {
     margin-top: min(3vw, 23px);
     max-width: 570px;
-    @extend %primary-paragraph;
   }
 }
 

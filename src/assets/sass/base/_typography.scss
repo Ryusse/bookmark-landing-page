@@ -9,17 +9,27 @@ body {
 
 p {
   @include font-size($p-font-sizes);
+  color: $grayish-blue;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-weight: $bold;
   line-height: 1.1;
+  color: $very-dark-blue;
 }
 
 h2 {
   @include font-size($h2-font-sizes);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*Header*/

@@ -85,17 +85,26 @@
 
     &__container {
       display: flex;
-      max-width: 29rem;
       flex-direction: column;
+      max-width: 29rem;
+
+      .panel__more-info {
+        display: none;
+      }
+
       @include query(md) {
         text-align: start;
+
+        .panel__more-info {
+          display: flex;
+        }
       }
     }
 
     &__container-title {
       @include font-size($h3-font-sizes);
     }
-    
+
     &__container-title,
     &__container-text {
       margin-bottom: 1rem;

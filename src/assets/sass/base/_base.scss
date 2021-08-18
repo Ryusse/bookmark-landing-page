@@ -1,9 +1,5 @@
 @use '../abstracts/all' as *;
 
-* {
-  margin: 0;
-}
-
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
@@ -21,27 +17,4 @@ body {
 ul {
   list-style: none;
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-p {
-  color: $grayish-blue;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $very-dark-blue;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: clamp(1.5rem, 4vw, 1.9rem);
 }

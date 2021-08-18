@@ -1,6 +1,6 @@
 <template>
   <section class="features" id="features">
-    <div class="features__container">
+    <div class="features__container primary-title-subtitle">
       <h2 class="features__title">Features</h2>
       <p class="features__text">
         Our aim is to make it quick and easy for you to access your favourite
