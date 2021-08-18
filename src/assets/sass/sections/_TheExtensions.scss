@@ -18,21 +18,19 @@
   @include query(lg) {
     width: 93%;
 
-    > :nth-child(2) {
+    > :nth-child(3n + 2) { // 2, 5, 8, ...
       margin-top: $card-top-margin;
     }
     
-    > :nth-child(3) {
+    > :nth-child(3n + 3) { // 3, 6, 9, ...
       margin-top: $card-top-margin * 2;
     }
   }
 
   // special case
   @media screen and (min-width: 960px) and (max-width: 1195px) {
-    > :nth-child(2),
-    > :nth-child(3) {
-      margin-top: 0;
-    }
+    > :nth-child(3n + 2),
+    > :nth-child(3n + 3) { margin-top: 0 }
   }
 }
 
