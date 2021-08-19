@@ -18,17 +18,12 @@ $bold: 500;
 
 //Maps
 $breakpoints: (
-  xs: 25em,
-  // 400px
-    ms: 34em,
-  // 544px
-    md: 48em,
-  // 768px
-    lg: 60em,
-  // 960px
-    xl: 80em,
-  // 1280px
-    xxl: 90em // 1440px,
+  xs: 25em, // 400px
+  ms: 34em, // 544px
+  md: 48em, // 768px
+  lg: 60em, // 960px
+  xl: 80em, // 1280px
+  xxl: 90em // 1440px,
 );
 
 $h1-font-sizes: (
@@ -112,9 +107,9 @@ $tab-font-sizes: (
 );
 
 $footer-nav-font-sizes: (
-  null: 0.9375rem,
-  xs: 0.9375rem,
-  ms: 0.9375rem,
+  null: 0.88rem,
+  xs: 0.88rem,
+  ms: 0.88rem,
   md: 0.8rem,
   lg: 0.8rem,
   xl: 0.8rem,

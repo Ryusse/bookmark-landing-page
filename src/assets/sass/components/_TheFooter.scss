@@ -6,8 +6,8 @@
   color: white;
 }
 
-.footer a {
-  &:focus-visible { outline: $soft-blue 2px solid }
+.footer a:focus-visible {
+  outline: $soft-blue 2px solid;
 }
 
 .footer__aside {
@@ -28,10 +28,6 @@
 }
 
 .footer__aside__logo {
-  // flex:1 1 20%;
-  // height: 26px;
-  // padding: 4px 0 4px 4px;
-
   display: inline-block;
   height: 26px;
   padding: 7px 10px;
@@ -44,7 +40,7 @@
   text-align: center;
   
   &__ul {
-    @include flexbox(col, null, null, 30px);
+    @include flexbox(col, null, null, 22px);
     @include query(md) {  @include flexbox(row, null, null, 25px) }
     @include font-size($footer-nav-font-sizes);
     letter-spacing: 2px;
