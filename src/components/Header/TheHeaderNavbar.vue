@@ -12,8 +12,8 @@
       <li class="navbar__item">
         <BaseButtonLink
           class="button--login navbar__link"
-          bgColor="hsl(0, 94%, 66%)"
-          :width="111"
+          :bgColor="colors.softRed"
+          width="111px"
         >
           Login
         </BaseButtonLink>
@@ -26,8 +26,8 @@
       :class="{ active: showMobileMenu }"
       @click="showMobileMenu = !showMobileMenu"
     >
-      <IconMenu v-if="!showMobileMenu" />
-      <IconClose v-else />
+      <IconClose v-if="showMobileMenu" />
+      <IconMenu v-else />
     </button>
 
     <!--Navbar links Mobile-->
@@ -45,8 +45,8 @@
         <li class="menu__item">
           <BaseButtonLink
             class="menu__link button--login"
-            bgColor="hsl(0, 94%, 66%)"
-            :width="111"
+            bgColor="transparent"
+            width="111px"
           >
             Login
           </BaseButtonLink>
@@ -76,7 +76,7 @@ import IconTwitter from "../icons/IconTwitter.vue";
 export default {
   name: "Navbar",
   props: {
-    navLinks: Array
+    navLinks: Array,
   },
   components: {
     IconLogo,
@@ -89,8 +89,10 @@ export default {
   data() {
     return {
       showMobileMenu: false,
+      colors: {
+        softRed: "hsl(0, 94%, 66%)"
+      },
     };
   },
 };
-
 </script>

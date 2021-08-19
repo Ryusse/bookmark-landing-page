@@ -32,9 +32,9 @@
           </transition>
         </div>
         <BaseButton
-          :bgColor="'hsl(0, 94%, 66%)'"
-          :width="125"
-          :height="46"
+          bgColor="hsl(0, 94%, 66%)"
+          width="125px"
+          height="46px"
           class="email-list__signup__btn"
           @click="validateEmail"
         >

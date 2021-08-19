@@ -1,6 +1,6 @@
 <template>
-  <span :style="{ color: bgColor }"> <!-- to inherit color -->
-    <button :style="btnStyles" :class="$style['base-btn']">
+  <span :style="{ color: bgColor }"><!-- to inherit color -->
+    <button :style="btnStyles" class="base-btn">
       <slot></slot>
     </button>
   </span>
@@ -10,12 +10,12 @@
 export default {
   props: {
     width: {
-      type: Number,
-      default: 160,
+      type: String,
+      default: "160px",
     },
     height: {
-      type: Number,
-      default: 42,
+      type: String,
+      default: "42px",
     },
     color: {
       type: String,
@@ -29,8 +29,8 @@ export default {
   data() {
     return {
       btnStyles: {
-        width: `${this.width}px`,
-        height: `${this.height}px`,
+        width: this.width,
+        height: this.height,
         color: this.color,
         backgroundColor: this.bgColor,
         borderColor: this.bgColor,
@@ -40,8 +40,7 @@ export default {
 };
 </script>
 
-<style lang="scss" module>
-
+<style lang="scss" scoped>
 .base-btn {
   $delay: 500ms;
   margin: 10px 0;
@@ -52,7 +51,7 @@ export default {
   transition: background-color $delay, color $delay, border $delay;
   box-shadow: 0px 4px 10px #00000029;
   font-weight: 500;
-  font-size: clamp(.85rem, 2.1vw, .9rem);
+  font-size: clamp(0.85rem, 2.1vw, 0.9rem);
   outline: transparent;
   user-select: none;
 
@@ -61,10 +60,5 @@ export default {
     background-color: transparent !important; // override inline styles
     color: inherit !important; // override inline styles
   }
-
-  @media screen and (max-width: 400px) {
-    width: 40vw !important; // override
-  }
 }
-
 </style>

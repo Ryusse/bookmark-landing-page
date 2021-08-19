@@ -14,12 +14,12 @@ export default {
       default: '#'
     },
     width: {
-      type: Number,
-      default: 160,
+      type: String,
+      default: '160px',
     },
     height: {
-      type: Number,
-      default: 42,
+      type: String,
+      default: '42px',
     },
     color: {
       type: String,
@@ -33,8 +33,8 @@ export default {
   data() {
     return {
       btnStyles: {
-        width: `${this.width}px`,
-        height: `${this.height}px`,
+        width: this.width,
+        height: this.height,
         color: this.color,
         backgroundColor: this.bgColor,
         borderColor: this.bgColor,

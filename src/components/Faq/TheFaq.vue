@@ -15,7 +15,7 @@
         />
       </ul>
     </div>
-    <BaseButtonLink :width="110" :height="45">More Info</BaseButtonLink>
+    <BaseButtonLink width="110px" height="45px">More Info</BaseButtonLink>
   </section>
 </template>
 
