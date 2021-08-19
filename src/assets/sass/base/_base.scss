@@ -10,7 +10,7 @@ body {
 }
 
 ::selection {
-  background-color: $soft-blue;
+  background-color: transparentize($soft-blue, .2);
   color: white;
 }
 
