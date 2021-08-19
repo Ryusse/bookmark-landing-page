@@ -9,7 +9,7 @@
       <nav class="footer__nav">
         <ul class="footer__nav__ul">
           <li class="footer__nav__ul__li" v-for="item in navList" :key="item">
-            <a href="#">{{ item }}</a>
+            <a :href="`#${item}`">{{ item }}</a>
           </li>
         </ul>
       </nav>
@@ -37,7 +37,7 @@ export default {
   },
   data() {
     return {
-      navList: ["Features", "Pricing", "Contact"],
+      navList: ["features", "pricing", "contact"],
     };
   },
 };

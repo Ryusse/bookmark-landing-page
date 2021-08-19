@@ -41,12 +41,18 @@
   width: 100%;
   max-width: 445px;
   margin-top: 29px;
-  @include flexbox(null, center, center, 0 20px);
+  @include flexbox(null, center, baseline, 0 20px);
   flex-wrap: wrap;
 
   .input-wrapper {
     isolation: isolate;
     position: relative;
+    transition: box-shadow 200ms;
+    @include flexbox(col);
+
+    &:focus-within { 
+      box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, .2);
+    }
 
     &::after {
       content: url("assets/images/icon-error.svg");
@@ -67,24 +73,22 @@
     border: none;
     font-size: 0.9rem;
     caret-color: black;
-    transition: box-shadow 200ms;
 
     &::placeholder {
       color: $grayish-blue;
     }
 
     &:focus-visible { 
-      box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, .2);
       outline: transparent;
     }
   }
 
   &__alert {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 27px;
     left: 0;
-    bottom: -30px;
+    bottom: 4px;
     background: $soft-red;
     padding-top: 5px;
     z-index: -1;

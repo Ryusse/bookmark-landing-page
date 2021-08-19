@@ -1,5 +1,5 @@
 <template>
-  <!-- <BaseButton @click="isSubscribed = false" bgColor="coral">Reset</BaseButton> -->
+  <!-- <BaseButton @click="isEmailValid = !isEmailValid" bgColor="lightBlue">Toggle</BaseButton> -->
   <section class="email-list">
     <span class="email-list__subtitle">35,000+ already joined</span>
     <h2 class="email-list__title">Stay up-to-date with what we’re doing</h2>
