@@ -2,7 +2,7 @@
 
 .navbar {
   width: 100%;
-  max-width: 1150px;
+  max-width: $max-site-width;
   display: flex;
   justify-content: space-between;
   place-items: center;
