@@ -29,18 +29,19 @@
   }
 
   &::before {
-    width: calc(100% - 23vw);
+    --left: 23vw;
+
+    width: calc(100% - var(--left));
     height: 84%;
     top: 20%;
     background-color: $soft-blue;
     border-radius: 5000px 0 0 5000px;
-    left: 23vw;
+    left: var(--left);
 
     @include query(md) {
-      width: calc(100% - 9vw);
+      --left: 9vw;
       height: 73%;
       top: 30%;
-      left: 9vw;
     }
   }
   
@@ -52,8 +53,15 @@
   }
 
   @media screen and (min-width: 567px) and (max-width: 767px) {
-    height: 54vw;
-    &::after { background-size: 80% }
+    height: 55vw;
+    &::before {
+      --left: 25vw;
+      height: 72%;
+      top: 27%;
+    }
+    &::after { 
+      background-size: 80%;
+    }
   }
 }
 
