@@ -16,10 +16,10 @@
 
 .footer__aside__container {
   width: 100%;
-  max-width: 1150px;
+  max-width: $max-site-width;
   padding: 30px 5vw 24px;
   @include flexbox(col, null, center, 30px);
-  @include query(md) { @include flexbox(row, null, center, 5vw) }
+  @include query(md) { @include flexbox(row, null, center, 4.67vw) }
 }
 
 .footer__aside__logo-wrapper {
