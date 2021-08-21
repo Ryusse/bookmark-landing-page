@@ -86,6 +86,7 @@
     &__container {
       display: flex;
       flex-direction: column;
+      place-items: center;
       max-width: 29rem;
 
       .panel__more-info {
