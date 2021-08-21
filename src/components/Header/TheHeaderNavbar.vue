@@ -87,26 +87,9 @@ export default {
     IconTwitter,
   },
 
-  methods: {
-    onResize() {
-      
-      const menu = document.querySelector(".menu"),
-            burger = document.querySelector(".burger"),
-            menuSocial = document.querySelector(".menu__social");
-
-      if(window.innerWidth > 900){
-        menu.classList.remove(".active");
-        burger.classList.remove(".active");
-        menuSocial.classList.remove(".active");
-      }
-    
-    },
-  },
   data() {
     return {
       showMobileMenu: false,
-      error: false,
-      windoWidth : window.innerWidth,
 
       colors: {
         softRed: "hsl(0, 94%, 66%)",
