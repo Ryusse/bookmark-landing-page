@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <EmailList />
     <FooterNav />
   </footer>

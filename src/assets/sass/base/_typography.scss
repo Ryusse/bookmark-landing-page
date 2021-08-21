@@ -51,6 +51,20 @@ a {
   &__save.active {
     fill: #242a45;
   }
+
+  @include query(md){
+    &__text.active {
+      fill: #242A45;
+    }
+  
+    &__circle.active {
+      fill: #5267DF;
+    }
+  
+    &__save.active {
+      fill: #fff;
+    }
+  }
 }
 
 .burger > svg {

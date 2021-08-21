@@ -23,7 +23,7 @@
     <!--Menu Burger-->
     <button
       class="burger"
-      :class="{ active: showMobileMenu }"
+      :class="{ active: showMobileMenu}"
       @click="showMobileMenu = !showMobileMenu"
     >
       <IconClose v-if="showMobileMenu" />
@@ -86,11 +86,13 @@ export default {
     IconFacebook,
     IconTwitter,
   },
+
   data() {
     return {
       showMobileMenu: false,
+
       colors: {
-        softRed: "hsl(0, 94%, 66%)"
+        softRed: "hsl(0, 94%, 66%)",
       },
     };
   },
