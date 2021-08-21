@@ -23,7 +23,7 @@
     <!--Menu Burger-->
     <button
       class="burger"
-      :class="{ active: showMobileMenu }"
+      :class="{ active: showMobileMenu}"
       @click="showMobileMenu = !showMobileMenu"
     >
       <IconClose v-if="showMobileMenu" />
@@ -86,11 +86,30 @@ export default {
     IconFacebook,
     IconTwitter,
   },
+
+  methods: {
+    onResize() {
+      
+      const menu = document.querySelector(".menu"),
+            burger = document.querySelector(".burger"),
+            menuSocial = document.querySelector(".menu__social");
+
+      if(window.innerWidth > 900){
+        menu.classList.remove(".active");
+        burger.classList.remove(".active");
+        menuSocial.classList.remove(".active");
+      }
+    
+    },
+  },
   data() {
     return {
       showMobileMenu: false,
+      error: false,
+      windoWidth : window.innerWidth,
+
       colors: {
-        softRed: "hsl(0, 94%, 66%)"
+        softRed: "hsl(0, 94%, 66%)",
       },
     };
   },
