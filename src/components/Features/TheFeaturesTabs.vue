@@ -36,7 +36,7 @@
         :class="{ 'active show': isActive('section-1') }"
         id="section-1"
       >
-          <img
+        <img
           class="panel__section-img"
           src="../../assets/images/illustration-features-tab-1.svg"
           alt=""

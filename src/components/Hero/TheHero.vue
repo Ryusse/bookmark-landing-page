@@ -28,8 +28,29 @@ import BaseButton from "../Base/BaseButton.vue";
 
 export default {
   name: "TheHero",
-  components: {
-    BaseButton,
+  components: { BaseButton },
+  props: { options: Object },
+
+  data() {
+    return { observer: null };
+  },
+
+  methods: {
+    ioCallback(entries) {
+      entries.forEach(({ isIntersecting, intersectionRatio }) => {
+        this.$emit("intersect", isIntersecting, intersectionRatio);
+      })
+    }
+  },
+
+  mounted() {
+    const options = this.options ?? {};
+    this.observer = new IntersectionObserver(this.ioCallback, options);
+    this.observer.observe(this.$el);
+  },
+
+  unmounted() {
+    this.observer.disconnect();
   },
 };
 </script>
