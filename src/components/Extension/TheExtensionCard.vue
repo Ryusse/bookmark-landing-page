@@ -6,7 +6,7 @@
     <h3 class="ext-card__title">Add to {{ ext.browser }}</h3>
     <p class="ext-card__subtitle">Minimum version {{ ext.min_version }}</p>
     <div class="ext-card__btn-wrapper">
-      <BaseButton width="230px" height="49px">Add & Install Extension</BaseButton>
+      <BaseButton width="100%" height="49px" class="ext-btn">Add & Install Extension</BaseButton>
     </div>
   </div>
 </template>

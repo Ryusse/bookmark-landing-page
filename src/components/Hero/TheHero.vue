@@ -9,11 +9,11 @@
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div class="hero__col__btns">
-          <BaseButton>Get it on Chrome</BaseButton>
+          <BaseButton class="hero-chrome-btn">Get it on Chrome</BaseButton>
           <BaseButton
             color="hsl(229, 31%, 21%)"
             bgColor="hsl(180deg 9% 98%)"
-            class="firefox-btn"
+            class="hero-firefox-btn"
           >
             Get it on Firefox
           </BaseButton>
@@ -31,9 +31,7 @@ export default {
   components: { BaseButton },
   props: { options: Object },
 
-  data() {
-    return { observer: null };
-  },
+  data: () => ({ observer: null }),
 
   methods: {
     ioCallback(entries) {

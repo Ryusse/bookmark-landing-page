@@ -27,35 +27,27 @@ export default {
     TheFaq,
     TheFooter,
   },
+
   data() {
     return {
       frames: 100,
     };
   },
+
   computed: {
     observerOptions() {
-      const thresholdArray = Array.apply(null, { length: this.frames }).map(
-        (x, i) => i / this.frames
-      );
       return {
-        threshold: thresholdArray,
+        threshold: 0,
       };
     },
   },
-  methods: {
-    intersected(isIntersecting, intersectionRatio) {
-      const translate =
-        (Math.round(intersectionRatio * this.frames) / this.frames) * 100;
-      const header = this.$refs.header.$el;
 
-      if (!isIntersecting) {
-        header.style.position = "sticky";
-        header.style.transform = `translateY(-${translate}%)`;
-      } else {
-        header.style.transform = 'translateY(0%)';
-        console.log(`translateY(-${translate}%)`);
-        header.style.position = "relative";
-      }
+  methods: {
+    intersected(isIntersecting) {
+      const header = this.$refs.header.$el;
+      
+      if (!isIntersecting) header.style.position = "sticky";
+      else header.style.position = "relative";
     },
   },
 };
