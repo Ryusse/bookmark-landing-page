@@ -47,6 +47,7 @@
             class="menu__link button--login"
             bgColor="transparent"
             width="111px"
+            height="46px"
           >
             Login
           </BaseButtonLink>
@@ -86,10 +87,11 @@ export default {
     IconFacebook,
     IconTwitter,
   },
-  
+
   data() {
     return {
       showMobileMenu: false,
+
       colors: {
         softRed: "hsl(0, 94%, 66%)",
       },

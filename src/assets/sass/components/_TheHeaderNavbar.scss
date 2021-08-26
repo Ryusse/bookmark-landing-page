@@ -133,6 +133,25 @@
   }
 }
 
+.menu__link.button--login {
+  width: 100% !important;
+
+  > a {
+    width: 100% !important;
+    border-color: white !important;
+    font-size: inherit;
+
+    &:hover,
+    &:focus {
+      color: white !important;
+    }
+
+    &:focus {
+      border-color: $soft-red !important;
+    }
+  }
+}
+
 .button--login > button {
   text-transform: uppercase;
 }

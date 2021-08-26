@@ -1,5 +1,5 @@
 <template>
-  <section class="features" id="features">
+  <section class="features" id="features" ref="h">
     <div class="features__container primary-title-subtitle">
       <h2 class="features__title">Features</h2>
       <p class="features__text">
@@ -8,7 +8,7 @@
         them on the go.
       </p>
     </div>
-    <Tabs/>
+    <Tabs />
   </section>
 </template>
 

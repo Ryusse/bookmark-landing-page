@@ -41,6 +41,7 @@
   border-radius: 13px;
   padding-top: 50px;
   box-shadow: 0 12px 12px 1px rgba($grayish-blue, .27);
+  overflow: hidden;
 
   &__icon {
     background-repeat: no-repeat;
@@ -58,5 +59,10 @@
     @include flexbox(null, center, center);
     height: 90px;
     width: 100%;
+
+    .ext-btn {
+      width: 100%;
+      padding: 2px 19px 0px 19px;
+    }
   }
 }

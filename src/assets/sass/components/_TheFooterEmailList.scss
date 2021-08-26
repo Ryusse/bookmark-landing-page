@@ -45,13 +45,14 @@
   flex-wrap: wrap;
 
   .input-wrapper {
+    flex-basis: 300px;
     isolation: isolate;
     position: relative;
     transition: box-shadow 200ms;
     @include flexbox(col);
 
-    &:focus-within { 
-      box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, .2);
+    &:focus-within {
+      box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, 0.2);
     }
 
     &::after {
@@ -66,9 +67,8 @@
 
   &__email {
     box-sizing: border-box;
-    width: 300px;
     height: 46px;
-    padding-left: 16px;
+    text-indent: 16px;
     border-radius: 5px;
     border: none;
     font-size: 0.9rem;
@@ -78,7 +78,7 @@
       color: $grayish-blue;
     }
 
-    &:focus-visible { 
+    &:focus-visible {
       outline: transparent;
     }
   }
@@ -96,10 +96,11 @@
     font-style: italic;
     border-radius: 0 0 5px 5px;
     font-weight: $bold;
-    box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, .2);
+    box-shadow: 4px 4px 8px 1px rgba($very-dark-blue, 0.2);
   }
 
   &__btn {
+    flex-basis: calc(100% - 320px); // 320px = input width + column-gap = 300px + 20px
     flex-grow: 1;
 
     > button {
@@ -125,7 +126,7 @@
   transform: translateY(50%) scale(1);
 }
 
-// alert transition
+// Alert transitions
 
 .email-alert-transition-enter-active,
 .email-alert-transition-leave-active {

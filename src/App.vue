@@ -1,8 +1,8 @@
 <template>
-  <main class="layout"> 
-    <TheHeader />
-    <TheHero />
-    <TheFeatures/>
+  <main class="layout">
+    <TheHeader ref="header" />
+    <TheHero @intersect="intersected" :options="observerOptions"  />
+    <TheFeatures />
     <TheExtension />
     <TheFaq />
     <TheFooter />
@@ -12,7 +12,7 @@
 <script>
 import TheHeader from "./components/Header/TheHeader.vue";
 import TheHero from "./components/Hero/TheHero.vue";
-import TheExtension from './components/Extension/TheExtension.vue';
+import TheExtension from "./components/Extension/TheExtension.vue";
 import TheFeatures from "./components/Features/TheFeatures.vue";
 import TheFaq from "./components/Faq/TheFaq.vue";
 import TheFooter from "./components/Footer/TheFooter.vue";
@@ -25,7 +25,30 @@ export default {
     TheExtension,
     TheFeatures,
     TheFaq,
-    TheFooter
+    TheFooter,
+  },
+
+  data() {
+    return {
+      frames: 100,
+    };
+  },
+
+  computed: {
+    observerOptions() {
+      return {
+        threshold: 0,
+      };
+    },
+  },
+
+  methods: {
+    intersected(isIntersecting) {
+      const header = this.$refs.header.$el;
+      
+      if (!isIntersecting) header.style.position = "sticky";
+      else header.style.position = "relative";
+    },
   },
 };
 </script>

@@ -1,9 +1,9 @@
 <template>
-  <span :style="{ color: bgColor }"><!-- to inherit color -->
+  <div :style="{ color: bgColor }"><!-- to inherit color -->
     <button :style="btnStyles" class="base-btn">
       <slot></slot>
     </button>
-  </span>
+  </div>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
   props: {
     width: {
       type: String,
-      default: "160px",
+      default: "clamp(80px, 40vw,160px)",
     },
     height: {
       type: String,

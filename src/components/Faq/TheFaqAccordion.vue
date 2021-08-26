@@ -2,8 +2,8 @@
   <li :class="{ expanded: expanded }">
     <button
       class="accordion-question"
-      @click="toggleQuestion"
-      @keyup.space="toggleQuestion"
+      @click="toggleAnswer"
+      @keyup.space="toggleAnswer"
       :aria-expanded="expanded"
     >
       <span class="accordion-question__text"> {{ question }} </span>
@@ -43,7 +43,7 @@ export default {
     };
   },
   methods: {
-    toggleQuestion() {
+    toggleAnswer() {
       this.expanded = !this.expanded;
     },
   },

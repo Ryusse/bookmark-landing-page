@@ -1,9 +1,9 @@
 <template>
-  <span :style="{ color: bgColor }"> <!-- to inherit color -->
+  <div :style="{ color: bgColor }"> <!-- to inherit color -->
     <a :href="url" :style="btnStyles" :class="$style['base-link']">
       <slot></slot>
     </a>
-  </span>
+  </div>
 </template>
 
 <script>
