@@ -48,7 +48,7 @@
             interface gives you complete control over how you manage your
             favourite sites.
           </p>
-          <BaseButtonLink class="panel__more-info">More Info</BaseButtonLink>
+          <BaseButton type="link" class="panel__more-info">More Info</BaseButton>
         </div>
       </div>
 
@@ -69,7 +69,7 @@
             Our powerful search feature will help you find saved sites in no
             time at all. No need to trawl through all of your bookmarks.
           </p>
-          <BaseButtonLink>More Info</BaseButtonLink>
+          <BaseButton type="link">More Info</BaseButton>
         </div>
       </div>
 
@@ -90,7 +90,7 @@
             Easily share your bookmarks and collections with others. Create a
             shareable link that you can send at the click of a button.
           </p>
-          <BaseButtonLink>More Info</BaseButtonLink>
+          <BaseButton type="link">More Info</BaseButton>
         </div>
       </div>
     </div>
@@ -98,11 +98,11 @@
 </template>
 
 <script>
-import BaseButtonLink from "../Base/BaseButtonLink.vue";
+import BaseButton from "../Base/BaseButton.vue";
 
 export default {
   name: "Tabs",
-  components: { BaseButtonLink },
+  components: { BaseButton },
 
   data() {
     return {

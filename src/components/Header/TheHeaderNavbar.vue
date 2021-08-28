@@ -10,13 +10,14 @@
         <a :href="`#${navLink}`" class="navbar__link">{{ navLink }}</a>
       </li>
       <li class="navbar__item">
-        <BaseButtonLink
+        <BaseButton
+          type="link"
           class="button--login navbar__link"
           :bgColor="colors.softRed"
           width="111px"
         >
           Login
-        </BaseButtonLink>
+        </BaseButton>
       </li>
     </ul>
 
@@ -43,14 +44,15 @@
           </a>
         </li>
         <li class="menu__item">
-          <BaseButtonLink
+          <BaseButton
+            type="link"
             class="menu__link button--login"
             bgColor="transparent"
             width="111px"
             height="46px"
           >
             Login
-          </BaseButtonLink>
+          </BaseButton>
         </li>
       </ul>
 
@@ -70,7 +72,7 @@
 import IconLogo from "../icons/TheHeaderLogo.vue";
 import IconMenu from "../icons/IconHamMenu.vue";
 import IconClose from "../icons/IconClose.vue";
-import BaseButtonLink from "../Base/BaseButtonLink.vue";
+import BaseButton from "../Base/BaseButton.vue";
 import IconFacebook from "../icons/IconFacebook.vue";
 import IconTwitter from "../icons/IconTwitter.vue";
 
@@ -83,7 +85,7 @@ export default {
     IconLogo,
     IconMenu,
     IconClose,
-    BaseButtonLink,
+    BaseButton,
     IconFacebook,
     IconTwitter,
   },

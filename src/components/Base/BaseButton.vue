@@ -1,14 +1,26 @@
 <template>
   <div :style="{ color: bgColor }"><!-- to inherit color -->
-    <button :style="btnStyles" class="base-btn">
+    <button v-if="type === 'button'" :style="btnStyles" class="base-btn">
       <slot></slot>
     </button>
+    <a
+      v-else-if="type === 'link'"
+      :href="url"
+      :style="btnStyles"
+      class="base-link"
+    >
+      <slot></slot>
+    </a>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    type: {
+      type: String,
+      default: "button",
+    },
     width: {
       type: String,
       default: "clamp(80px, 40vw,160px)",
@@ -24,6 +36,10 @@ export default {
     bgColor: {
       type: String,
       default: "hsl(231, 69%, 60%)",
+    },
+    url: {
+      type: String,
+      default: "#",
     },
   },
   data() {
@@ -41,7 +57,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.base-btn {
+.base-btn,
+.base-link {
   $delay: 500ms;
   margin: 10px 0;
   text-align: center;
@@ -54,6 +71,10 @@ export default {
   font-size: clamp(0.85rem, 2.1vw, 0.9rem);
   outline: transparent;
   user-select: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover,
   &:focus-visible {
