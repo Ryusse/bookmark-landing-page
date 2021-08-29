@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from "@vue/reactivity";
 import IconArrow from "../icons/IconArrow.vue";
 
 export default {
@@ -40,8 +40,8 @@ export default {
   },
   setup() {
     const expanded = ref(false);
-    const toggleAnswer = () => expanded.value = !expanded.value;
-    return { expanded, toggleAnswer }
+    const toggleAnswer = () => (expanded.value = !expanded.value);
+    return { expanded, toggleAnswer };
   },
 };
 </script>

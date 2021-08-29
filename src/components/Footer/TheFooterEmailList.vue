@@ -51,6 +51,7 @@
 </template>
 
 <script>
+import { ref } from '@vue/reactivity';
 import BaseButton from "../Base/BaseButton.vue";
 // import useVuelidate from '@vuelidate/core'
 // import { required, email, minLength } from '@vuelidate/validators'
@@ -60,21 +61,21 @@ export default {
   components: {
     BaseButton,
   },
-  data() {
-    return {
-      userEnteredEmail: "",
-      isEmailValid: true,
-      isSubscribed: false,
-    };
-  },
-  methods: {
-    validateEmail() {
+  setup() {
+    const userEnteredEmail = ref("");
+    const isEmailValid = ref(true);
+    const isSubscribed = ref(false);
+
+    const validateEmail = () => {
       const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      const isValid = pattern.test(String(this.userEnteredEmail).toLowerCase());
-      this.isEmailValid = isValid;
-      this.isSubscribed = isValid;
-    },
+      const isValid = pattern.test(String(userEnteredEmail.value).toLowerCase());
+      isEmailValid.value = isValid;
+      isSubscribed.value = isValid;
+    }
+
+    return {userEnteredEmail, isEmailValid, isSubscribed, validateEmail}
   },
+  
   // validations: {
   //   userEnteredEmail: {
   //     required,

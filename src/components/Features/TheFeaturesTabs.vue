@@ -48,7 +48,9 @@
             interface gives you complete control over how you manage your
             favourite sites.
           </p>
-          <BaseButton type="link" class="panel__more-info">More Info</BaseButton>
+          <BaseButton type="link" class="panel__more-info">
+            More Info
+          </BaseButton>
         </div>
       </div>
 
@@ -98,25 +100,18 @@
 </template>
 
 <script>
+import { ref } from "@vue/reactivity";
 import BaseButton from "../Base/BaseButton.vue";
 
 export default {
   name: "Tabs",
   components: { BaseButton },
 
-  data() {
-    return {
-      activeItem: "section-1",
-    };
-  },
-
-  methods: {
-    isActive(menuItem) {
-      return this.activeItem === menuItem;
-    },
-    setActive(menuItem) {
-      this.activeItem = menuItem;
-    },
+  setup() {
+    const activeItem = ref("section-1");
+    const isActive = (menuItem) => activeItem.value === menuItem;
+    const setActive = (menuItem) => (activeItem.value = menuItem);
+    return { activeItem, isActive, setActive };
   },
 };
 </script>
