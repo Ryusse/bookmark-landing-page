@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero" ref="root">
     <div class="wrapper">
       <div class="hero__col hero__col--illustration"></div>
       <div class="hero__col hero__col--content">
@@ -24,31 +24,35 @@
 </template>
 
 <script>
+import { ref, toRefs } from "@vue/reactivity";
 import BaseButton from "../Base/BaseButton.vue";
+import { onMounted, onUnmounted } from "@vue/runtime-core";
 
 export default {
   name: "TheHero",
   components: { BaseButton },
   props: { options: Object },
 
-  data: () => ({ observer: null }),
+  setup(props, { emit }) {
+    const observer = ref(null);
+    const root = ref(null);
+    const { options } = toRefs(props);
 
-  methods: {
-    ioCallback(entries) {
-      entries.forEach(({ isIntersecting, intersectionRatio }) => {
-        this.$emit("intersect", isIntersecting, intersectionRatio);
-      })
-    }
-  },
+    const ioCallback = (entries) =>
+      entries.forEach(({ isIntersecting, intersectionRatio }) =>
+        emit("intersect", isIntersecting, intersectionRatio)
+      );
 
-  mounted() {
-    const options = this.options ?? {};
-    this.observer = new IntersectionObserver(this.ioCallback, options);
-    this.observer.observe(this.$el);
-  },
+    onMounted(() => {
+      observer.value = new IntersectionObserver(ioCallback, options);
+      observer.value.observe(root.value);
+    });
 
-  unmounted() {
-    this.observer.disconnect();
+    onUnmounted(() => {
+      observer.value.disconnect();
+    });
+
+    return { observer, ioCallback, root };
   },
 };
 </script>
