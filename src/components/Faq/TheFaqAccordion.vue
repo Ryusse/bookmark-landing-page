@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 import IconArrow from "../icons/IconArrow.vue";
 
 export default {
@@ -37,15 +38,10 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      expanded: false,
-    };
-  },
-  methods: {
-    toggleAnswer() {
-      this.expanded = !this.expanded;
-    },
+  setup() {
+    const expanded = ref(false);
+    const toggleAnswer = () => expanded.value = !expanded.value;
+    return { expanded, toggleAnswer }
   },
 };
 </script>
