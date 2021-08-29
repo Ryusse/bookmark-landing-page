@@ -31,11 +31,17 @@
 }
 
 .accordion-answer {
-  overflow: hidden;
-
+  overflow: auto;
+  max-height: 0;
+  transition: max-height 300ms;
+  
   > p {
     padding-bottom: 20px;
   }
+}
+
+.expanded .accordion-answer {
+  max-height: 1200px;
 }
 
 .answer-transition-enter-active {
